@@ -9,13 +9,17 @@
 import Foundation
 
 class YouTubeVideos {
-    var title: String
-    var published: NSDate
-    var videoURL: String
+    var title: String?
+    var publishedDate:String?
+    var videoURL: String?
     
-    init (title: String, published: NSDate, videoURL: String) {
+    init (title: String, publishedDate: String, videoURL: String) {
         self.title = title
-        self.published = published
+        self.publishedDate = publishedDate
         self.videoURL = videoURL
     }
 }
+
+let video1 = YouTubeVideos(title: "West Side Elite Week 11", publishedDate: "Nov 4, 2015", videoURL: "https://youtu.be/p06_v8zu8Oc")
+
+let video2 = YouTubeVideos(title: "High School Weekend Wrap-Up 10-2015", publishedDate: "Nov 4, 2015", videoURL: "https://youtu.be/kwOvBtYsNP4")

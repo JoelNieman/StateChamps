@@ -16,6 +16,8 @@
 		5DBCF9DE1BE7FD30001C45B4 /* StateChampsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DBCF9DD1BE7FD30001C45B4 /* StateChampsUITests.swift */; };
 		5DC384AD1BE9852D0052E4B8 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DC384AC1BE9852D0052E4B8 /* HomeViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		5DC3852C1BEBA4970052E4B8 /* YouTubeVideos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DC3852B1BEBA4970052E4B8 /* YouTubeVideos.swift */; settings = {ASSET_TAGS = (); }; };
+		5DC385321BED49B00052E4B8 /* VideoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DC385311BED49B00052E4B8 /* VideoTableViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		5DC385341BED4A630052E4B8 /* VideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DC385331BED4A630052E4B8 /* VideoViewController.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +54,8 @@
 		5DBCF9DF1BE7FD30001C45B4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5DC384AC1BE9852D0052E4B8 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		5DC3852B1BEBA4970052E4B8 /* YouTubeVideos.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YouTubeVideos.swift; sourceTree = "<group>"; };
+		5DC385311BED49B00052E4B8 /* VideoTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoTableViewController.swift; sourceTree = "<group>"; };
+		5DC385331BED4A630052E4B8 /* VideoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoViewController.swift; sourceTree = "<group>"; };
 		A5EC636D377A2B883CEBFA74 /* Pods-StateChamps.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StateChamps.release.xcconfig"; path = "Pods/Target Support Files/Pods-StateChamps/Pods-StateChamps.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -139,6 +143,8 @@
 			isa = PBXGroup;
 			children = (
 				5DC384AC1BE9852D0052E4B8 /* HomeViewController.swift */,
+				5DC385311BED49B00052E4B8 /* VideoTableViewController.swift */,
+				5DC385331BED4A630052E4B8 /* VideoViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -352,6 +358,8 @@
 				5DBCF9BE1BE7FD30001C45B4 /* AppDelegate.swift in Sources */,
 				5DC3852C1BEBA4970052E4B8 /* YouTubeVideos.swift in Sources */,
 				5DC384AD1BE9852D0052E4B8 /* HomeViewController.swift in Sources */,
+				5DC385341BED4A630052E4B8 /* VideoViewController.swift in Sources */,
+				5DC385321BED49B00052E4B8 /* VideoTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
