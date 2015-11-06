@@ -58,7 +58,7 @@
         <scene sceneID="Ze0-QT-c5c">
             <objects>
                 <tableViewController id="Wro-ol-chC" customClass="VideoTableViewController" customModule="StateChamps" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="x58-P7-0WM">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="x58-P7-0WM">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -71,7 +71,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="nKL-bN-Ghn" kind="show" id="htT-V2-5Z0"/>
+                                    <segue destination="nKL-bN-Ghn" kind="show" identifier="videoView" id="htT-V2-5Z0"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -86,10 +86,10 @@
             </objects>
             <point key="canvasLocation" x="644" y="253"/>
         </scene>
-        <!--View Controller-->
+        <!--Video View Controller-->
         <scene sceneID="Ft1-RC-1bX">
             <objects>
-                <viewController id="nKL-bN-Ghn" sceneMemberID="viewController">
+                <viewController id="nKL-bN-Ghn" customClass="VideoViewController" customModule="StateChamps" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="tAc-lN-GUQ"/>
                         <viewControllerLayoutGuide type="bottom" id="rFK-Qg-WFY"/>
@@ -98,7 +98,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8LN-tt-ICt">
+                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8LN-tt-ICt" customClass="YouTubePlayerView" customModule="YouTubePlayer">
                                 <rect key="frame" x="199" y="236" width="240" height="128"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
@@ -111,6 +111,9 @@
                             <constraint firstItem="8LN-tt-ICt" firstAttribute="centerY" secondItem="1zo-Xd-Rhh" secondAttribute="centerY" id="uoz-gx-30I"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="videoPlayer" destination="8LN-tt-ICt" id="8Yo-PG-OQH"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9oN-aX-Ell" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

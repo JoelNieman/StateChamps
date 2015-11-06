@@ -7,29 +7,27 @@
 //
 
 import UIKit
+import YouTubePlayer
 
 class VideoViewController: UIViewController {
 
+    @IBOutlet weak var videoPlayer: YouTubePlayerView!
+    
+    var selectedVideo = String()
+    
+    let myVideoURL = NSURL(selectedVideo)
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        loadVideo()
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    func loadVideo() {
+       videoPlayer.playerVars = [
+            "playsinline": "1",
+            "controls": "1",
+            "showinfo": "0"
+        ]
+        videoPlayer.loadVideoURL(myVideoURL!)
     }
-    */
-
 }
