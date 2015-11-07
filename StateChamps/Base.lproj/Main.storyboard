@@ -70,8 +70,10 @@
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
+                                <gestureRecognizers/>
                                 <connections>
-                                    <segue destination="nKL-bN-Ghn" kind="show" identifier="videoView" id="htT-V2-5Z0"/>
+                                    <outletCollection property="gestureRecognizers" destination="4Um-wI-icZ" appends="YES" id="VXQ-aW-ibj"/>
+                                    <segue destination="nKL-bN-Ghn" kind="show" id="2uU-Sx-0tg"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -83,6 +85,7 @@
                     <tabBarItem key="tabBarItem" title="Item" id="Nph-3L-lGZ"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vxp-7G-Jo4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="4Um-wI-icZ"/>
             </objects>
             <point key="canvasLocation" x="644" y="253"/>
         </scene>

@@ -15,7 +15,7 @@ class VideoViewController: UIViewController {
     
     var selectedVideo = String()
     
-    let myVideoURL = NSURL(selectedVideo)
+//    let myVideoURL = NSURL(selectedVideo)
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,6 +28,6 @@ class VideoViewController: UIViewController {
             "controls": "1",
             "showinfo": "0"
         ]
-        videoPlayer.loadVideoURL(myVideoURL!)
+//        videoPlayer.loadVideoURL(myVideoURL!)
     }
 }

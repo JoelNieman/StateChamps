@@ -36,12 +36,12 @@ class VideoTableViewController: UITableViewController {
         cell.textLabel?.text = youTubeVideos[indexPath.row].title
         return cell
     }
-    
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if segue.identifier == "videoView" {
-            let vc = segue.destinationViewController as! VideoViewController
-            vc.selectedVideo = 
-        }
-    }
+//    
+//    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+//        if segue.identifier == "videoView" {
+//            let vc = segue.destinationViewController as! VideoViewController
+//            vc.selectedVideo = 
+//        }
+//    }
 
 }
