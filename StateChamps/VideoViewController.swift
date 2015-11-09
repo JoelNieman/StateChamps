@@ -16,6 +16,7 @@ class VideoViewController: UIViewController {
     var selectedVideo: String = ""
     var selectedVideoURL = NSURL()
 
+    
 
     
     override func viewWillAppear(animated: Bool) {
@@ -23,18 +24,21 @@ class VideoViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        let selectedVideoURL = NSURL(string: selectedVideo)
-        print("\(selectedVideo) is the Selected Video")
-//        print(String("\(selectedVideoURL) is the selected video URL"))
         loadVideo()
     }
     
     func loadVideo() {
-       videoPlayer.playerVars = [
+        let selectedVideoURL = NSURL(string: selectedVideo)!
+        print(selectedVideoURL)
+        videoPlayer.playerVars = [
             "playsinline": "1",
             "controls": "1",
             "showinfo": "0"
         ]
         videoPlayer.loadVideoURL(selectedVideoURL)
     }
+
+    @IBAction func backButtonPressed(sender: AnyObject) {
+    }
+    
 }
