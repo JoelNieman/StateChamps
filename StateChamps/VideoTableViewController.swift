@@ -57,6 +57,11 @@ class VideoTableViewController: UITableViewController {
             }
         }
     }
+    
+    @IBAction func unwindForSegue(unwindSegue: UIStoryboardSegue) {
+        if(unwindSegue.sourceViewController .isKindOfClass(VideoViewController)) {
+        }
+    }
 }
 
 
