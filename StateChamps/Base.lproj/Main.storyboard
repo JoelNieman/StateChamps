@@ -102,27 +102,28 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8LN-tt-ICt" customClass="YouTubePlayerView" customModule="YouTubePlayer">
-                                <rect key="frame" x="199" y="236" width="240" height="128"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7vU-Bm-DT5">
+                                <rect key="frame" x="26" y="28" width="34" height="30"/>
+                                <state key="normal" title="Back"/>
+                                <connections>
+                                    <action selector="backButtonPressed:" destination="nKL-bN-Ghn" eventType="touchUpInside" id="wA1-sS-epw"/>
+                                    <segue destination="Wro-ol-chC" kind="show" id="SHu-Gv-XGp"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8LN-tt-ICt" customClass="YouTubePlayerView" customModule="YouTubePlayer">
+                                <rect key="frame" x="20" y="227" width="560" height="200"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="8LN-tt-ICt" secondAttribute="height" multiplier="16:9" id="rQN-TK-eA3"/>
+                                </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailingMargin" secondItem="8LN-tt-ICt" secondAttribute="trailing" id="3iw-Z5-NaM"/>
-                            <constraint firstItem="8LN-tt-ICt" firstAttribute="width" secondItem="1zo-Xd-Rhh" secondAttribute="height" multiplier="16:9" id="D2z-pV-zNc"/>
-                            <constraint firstItem="8LN-tt-ICt" firstAttribute="centerY" secondItem="1zo-Xd-Rhh" secondAttribute="centerY" id="FqE-Wy-eMa"/>
-                            <constraint firstItem="8LN-tt-ICt" firstAttribute="leading" secondItem="1zo-Xd-Rhh" secondAttribute="leadingMargin" id="WzV-0V-bln"/>
-                            <constraint firstItem="8LN-tt-ICt" firstAttribute="centerX" secondItem="1zo-Xd-Rhh" secondAttribute="centerX" id="pQY-5f-PXz"/>
-                            <constraint firstItem="8LN-tt-ICt" firstAttribute="centerY" secondItem="1zo-Xd-Rhh" secondAttribute="centerY" id="uoz-gx-30I"/>
+                            <constraint firstItem="8LN-tt-ICt" firstAttribute="centerY" secondItem="1zo-Xd-Rhh" secondAttribute="centerY" id="JFi-e7-NsV"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="8LN-tt-ICt" secondAttribute="leading" id="KdX-wx-4Y4"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="8LN-tt-ICt" secondAttribute="trailing" id="bdM-We-736"/>
                         </constraints>
-                        <variation key="default">
-                            <mask key="constraints">
-                                <exclude reference="3iw-Z5-NaM"/>
-                                <exclude reference="WzV-0V-bln"/>
-                                <exclude reference="uoz-gx-30I"/>
-                            </mask>
-                        </variation>
                     </view>
                     <navigationItem key="navigationItem" id="a7h-m8-WRi"/>
                     <connections>
@@ -152,4 +153,7 @@
             <point key="canvasLocation" x="-176" y="-87"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="SHu-Gv-XGp"/>
+    </inferredMetricsTieBreakers>
 </document>

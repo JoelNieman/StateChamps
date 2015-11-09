@@ -43,16 +43,18 @@ class VideoTableViewController: UITableViewController {
     }
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        let
         youTubeVideoSelected = youTubeVideos[indexPath.row]
     }
     
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == videoIdentifier {
-            let vc = segue.destinationViewController as! VideoViewController
-            vc.selectedVideo = youTubeVideoSelected.videoURL!
-//            vc.selectedVideo = selectedVideo
+            if let vc = segue.destinationViewController as? VideoViewController {
+                if let indexPath = tableView.indexPathForSelectedRow {
+                    let selectedVideo = youTubeVideos[indexPath.row]
+                    vc.selectedVideo = selectedVideo.videoURL!
+                }
+            }
         }
     }
 }
