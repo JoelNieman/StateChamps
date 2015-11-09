@@ -203,7 +203,31 @@
                     <view key="view" contentMode="scaleToFill" id="CJx-13-Dtf">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Tweet #1" translatesAutoresizingMaskIntoConstraints="NO" id="rE3-pc-RbA">
+                                <rect key="frame" x="20" y="90" width="560" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="rE3-pc-RbA" secondAttribute="height" multiplier="35:8" id="Glh-6D-wfL"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.90196079015731812" green="0.90196079015731812" blue="0.90196079015731812" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="rE3-pc-RbA" firstAttribute="centerX" secondItem="CJx-13-Dtf" secondAttribute="centerX" id="5Am-uZ-gw4"/>
+                            <constraint firstItem="rE3-pc-RbA" firstAttribute="centerY" secondItem="CJx-13-Dtf" secondAttribute="centerY" id="a0g-cB-xji"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="rE3-pc-RbA" secondAttribute="trailing" id="jvl-KM-WjE"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="rE3-pc-RbA" secondAttribute="leading" id="lJu-UM-7Kl"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="rE3-pc-RbA" secondAttribute="leading" id="mYZ-1V-zOW"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="rE3-pc-RbA" secondAttribute="trailing" id="nph-Tx-1uk"/>
+                            <constraint firstItem="rE3-pc-RbA" firstAttribute="top" secondItem="elr-jh-BKY" secondAttribute="bottom" constant="70" id="zF7-Ax-3VK"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="jvl-KM-WjE"/>
+                                <exclude reference="lJu-UM-7Kl"/>
+                                <exclude reference="zF7-Ax-3VK"/>
+                            </mask>
+                        </variation>
                     </view>
                     <tabBarItem key="tabBarItem" title="News" id="t8L-wc-xWH"/>
                 </viewController>
@@ -214,5 +238,6 @@
     </scenes>
     <resources>
         <image name="SC Logo small-1" width="147" height="73"/>
+        <image name="Tweet #1" width="1176" height="332"/>
     </resources>
 </document>
