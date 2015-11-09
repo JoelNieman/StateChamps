@@ -63,17 +63,16 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="tableCell" id="iTL-XG-qhr">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="tableCell" id="iTL-XG-qhr">
                                 <rect key="frame" x="0.0" y="28" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="iTL-XG-qhr" id="2xk-bP-36r">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="567" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                                 <gestureRecognizers/>
                                 <connections>
-                                    <outletCollection property="gestureRecognizers" destination="4Um-wI-icZ" appends="YES" id="VXQ-aW-ibj"/>
-                                    <segue destination="nKL-bN-Ghn" kind="show" id="2uU-Sx-0tg"/>
+                                    <segue destination="nKL-bN-Ghn" kind="show" identifier="ShowVideoSegue" id="DqD-YT-q7F"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -83,9 +82,11 @@
                         </connections>
                     </tableView>
                     <tabBarItem key="tabBarItem" title="Item" id="Nph-3L-lGZ"/>
+                    <connections>
+                        <outlet property="youTubeVideoTableView" destination="x58-P7-0WM" id="NpQ-w2-l11"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vxp-7G-Jo4" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="4Um-wI-icZ"/>
             </objects>
             <point key="canvasLocation" x="644" y="253"/>
         </scene>
@@ -110,10 +111,20 @@
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="8LN-tt-ICt" secondAttribute="trailing" id="3iw-Z5-NaM"/>
                             <constraint firstItem="8LN-tt-ICt" firstAttribute="width" secondItem="1zo-Xd-Rhh" secondAttribute="height" multiplier="16:9" id="D2z-pV-zNc"/>
+                            <constraint firstItem="8LN-tt-ICt" firstAttribute="centerY" secondItem="1zo-Xd-Rhh" secondAttribute="centerY" id="FqE-Wy-eMa"/>
                             <constraint firstItem="8LN-tt-ICt" firstAttribute="leading" secondItem="1zo-Xd-Rhh" secondAttribute="leadingMargin" id="WzV-0V-bln"/>
+                            <constraint firstItem="8LN-tt-ICt" firstAttribute="centerX" secondItem="1zo-Xd-Rhh" secondAttribute="centerX" id="pQY-5f-PXz"/>
                             <constraint firstItem="8LN-tt-ICt" firstAttribute="centerY" secondItem="1zo-Xd-Rhh" secondAttribute="centerY" id="uoz-gx-30I"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="3iw-Z5-NaM"/>
+                                <exclude reference="WzV-0V-bln"/>
+                                <exclude reference="uoz-gx-30I"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <navigationItem key="navigationItem" id="a7h-m8-WRi"/>
                     <connections>
                         <outlet property="videoPlayer" destination="8LN-tt-ICt" id="8Yo-PG-OQH"/>
                     </connections>

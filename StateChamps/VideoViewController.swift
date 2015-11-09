@@ -13,12 +13,19 @@ class VideoViewController: UIViewController {
 
     @IBOutlet weak var videoPlayer: YouTubePlayerView!
     
-    var selectedVideo = String()
+    var selectedVideo: String = ""
+    var selectedVideoURL = NSURL()
+
+
     
-//    let myVideoURL = NSURL(selectedVideo)
-    
+    override func viewWillAppear(animated: Bool) {
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
+        let selectedVideoURL = NSURL(string: selectedVideo)
+        print("\(selectedVideo) is the Selected Video")
+//        print(String("\(selectedVideoURL) is the selected video URL"))
         loadVideo()
     }
     
@@ -28,6 +35,6 @@ class VideoViewController: UIViewController {
             "controls": "1",
             "showinfo": "0"
         ]
-//        videoPlayer.loadVideoURL(myVideoURL!)
+        videoPlayer.loadVideoURL(selectedVideoURL)
     }
 }
