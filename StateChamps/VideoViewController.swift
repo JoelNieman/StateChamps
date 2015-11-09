@@ -37,8 +37,17 @@ class VideoViewController: UIViewController {
         ]
         videoPlayer.loadVideoURL(selectedVideoURL)
     }
-
-    @IBAction func backButtonPressed(sender: AnyObject) {
-    }
-    
 }
+
+//func unwindForSegue(unwindSegue: UIStoryboardSegue) {
+//    if(unwindSegue.sourceViewController .isKindOfClass(VideoViewController)) {
+//        let newListView: AddGroceryListViewController =
+//        unwindSegue.sourceViewController as! AddGroceryListViewController
+//        let newGroceryList = newListView.newGroceryList
+//        
+//        listOfGroceryLists.groceryListsArray.append(GroceryList(name: newGroceryList!))
+//        self.tableView.reloadData()
+//        
+//    }
+//}
+
