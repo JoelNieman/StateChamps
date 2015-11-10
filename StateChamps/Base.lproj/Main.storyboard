@@ -67,7 +67,7 @@
                             <constraint firstAttribute="leadingMargin" secondItem="OAk-ga-Dms" secondAttribute="leading" id="Vbb-MB-i4F"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Home" id="zTU-k9-K0y"/>
+                    <tabBarItem key="tabBarItem" title="Home" image="sample-504-doghouse" id="zTU-k9-K0y"/>
                     <connections>
                         <outlet property="playerView" destination="5TV-he-aeD" id="HEI-zZ-anQ"/>
                     </connections>
@@ -103,7 +103,7 @@
                             <outlet property="delegate" destination="Wro-ol-chC" id="7Co-0Y-Emi"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Videos" id="Nph-3L-lGZ"/>
+                    <tabBarItem key="tabBarItem" title="Videos" image="sample-1055-ticket" id="Nph-3L-lGZ"/>
                     <connections>
                         <outlet property="youTubeVideoTableView" destination="x58-P7-0WM" id="NpQ-w2-l11"/>
                     </connections>
@@ -184,7 +184,7 @@
         <scene sceneID="lur-1X-gvi">
             <objects>
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="zvj-9V-YQn" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Videos" id="fN1-je-2GE"/>
+                    <tabBarItem key="tabBarItem" title="Videos" image="sample-1055-ticket" id="fN1-je-2GE"/>
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="Hy2-YI-BLZ">
                         <autoresizingMask key="autoresizingMask"/>
@@ -249,7 +249,7 @@
                             </mask>
                         </variation>
                     </view>
-                    <tabBarItem key="tabBarItem" title="News" id="t8L-wc-xWH"/>
+                    <tabBarItem key="tabBarItem" title="News" image="sample-583-broadcast" id="t8L-wc-xWH"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wqL-hq-2Qo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -260,5 +260,8 @@
         <image name="SC Logo small-1" width="147" height="73"/>
         <image name="Tweet #1" width="1176" height="332"/>
         <image name="Tweet #2" width="1176" height="328"/>
+        <image name="sample-1055-ticket" width="28" height="18"/>
+        <image name="sample-504-doghouse" width="28" height="28"/>
+        <image name="sample-583-broadcast" width="28" height="29"/>
     </resources>
 </document>
