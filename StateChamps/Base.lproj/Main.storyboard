@@ -18,13 +18,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5TV-he-aeD" customClass="YouTubePlayerView" customModule="YouTubePlayer">
-                                <rect key="frame" x="20" y="60" width="560" height="315"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="5TV-he-aeD" secondAttribute="height" multiplier="16:9" id="KKw-Ig-7r1"/>
-                                </constraints>
-                            </view>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="SC Logo small-1" translatesAutoresizingMaskIntoConstraints="NO" id="UOM-ng-XHg">
                                 <rect key="frame" x="227" y="340" width="147" height="73"/>
                                 <constraints>
@@ -38,8 +31,14 @@
                                     <constraint firstAttribute="height" constant="107" id="sjI-pZ-KB0"/>
                                 </constraints>
                                 <attributedString key="attributedText">
+                                    <fragment content="Welcome to the State Champs iOS App! ">
+                                        <attributes>
+                                            <font key="NSFont" size="16" name="HelveticaNeue"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                        </attributes>
+                                    </fragment>
                                     <fragment>
-                                        <string key="content">Welcome to the State Champs iOS App! Here you will find all the news and media you've grown to love to keep you informed about Michigan HS Athletics. We'll update the app content as frequently as possible, but don't wait for us, upload your own videos and share with the community!</string>
+                                        <string key="content"> Here you will find all the news and media you've grown to love to keep you informed about Michigan HS Athletics. We'll update the app content as frequently as possible, but don't wait for us, upload your own videos and share with the community!</string>
                                         <attributes>
                                             <font key="NSFont" size="14" name="HelveticaNeue"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
@@ -48,15 +47,22 @@
                                 </attributedString>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5TV-he-aeD" customClass="YouTubePlayerView" customModule="YouTubePlayer">
+                                <rect key="frame" x="20" y="50" width="560" height="315"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="5TV-he-aeD" secondAttribute="height" multiplier="16:9" id="KKw-Ig-7r1"/>
+                                </constraints>
+                            </view>
                         </subviews>
-                        <color key="backgroundColor" red="0.90196079015731812" green="0.90196079015731812" blue="0.90196079015731812" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.80000001192092896" green="0.80000001192092896" blue="0.80000001192092896" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="5TV-he-aeD" secondAttribute="trailing" id="4CD-tn-XpB"/>
                             <constraint firstItem="OAk-ga-Dms" firstAttribute="top" secondItem="UOM-ng-XHg" secondAttribute="bottom" constant="23" id="9TT-d7-bde"/>
                             <constraint firstItem="UOM-ng-XHg" firstAttribute="centerY" secondItem="eTs-pF-rbh" secondAttribute="centerY" id="B3c-VM-Hm2"/>
                             <constraint firstAttribute="leadingMargin" secondItem="5TV-he-aeD" secondAttribute="leading" id="Jk6-Sj-vBe"/>
                             <constraint firstItem="UOM-ng-XHg" firstAttribute="centerX" secondItem="eTs-pF-rbh" secondAttribute="centerX" id="K3b-nx-uMH"/>
-                            <constraint firstItem="5TV-he-aeD" firstAttribute="top" secondItem="0vg-hJ-Nih" secondAttribute="bottom" constant="40" id="MKM-SI-Keq"/>
+                            <constraint firstItem="5TV-he-aeD" firstAttribute="top" secondItem="0vg-hJ-Nih" secondAttribute="bottom" constant="30" id="MKM-SI-Keq"/>
                             <constraint firstAttribute="trailingMargin" secondItem="OAk-ga-Dms" secondAttribute="trailing" id="Qhx-yE-xAA"/>
                             <constraint firstAttribute="leadingMargin" secondItem="OAk-ga-Dms" secondAttribute="leading" id="Vbb-MB-i4F"/>
                         </constraints>
@@ -136,7 +142,7 @@
                                 <rect key="frame" x="227" y="110" width="147" height="73"/>
                             </imageView>
                         </subviews>
-                        <color key="backgroundColor" red="0.90196079015731812" green="0.90196079015731812" blue="0.90196079015731812" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="rb0-5b-lG5" firstAttribute="centerX" secondItem="1zo-Xd-Rhh" secondAttribute="centerX" id="2IJ-2g-AlD"/>
                             <constraint firstItem="8LN-tt-ICt" firstAttribute="centerY" secondItem="1zo-Xd-Rhh" secondAttribute="centerY" id="JFi-e7-NsV"/>
@@ -204,28 +210,42 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Tweet #1" translatesAutoresizingMaskIntoConstraints="NO" id="rE3-pc-RbA">
-                                <rect key="frame" x="20" y="90" width="560" height="128"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Tweet #1" translatesAutoresizingMaskIntoConstraints="NO" id="rE3-pc-RbA">
+                                <rect key="frame" x="20" y="236" width="560" height="128"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="rE3-pc-RbA" secondAttribute="height" multiplier="35:8" id="Glh-6D-wfL"/>
                                 </constraints>
                             </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Tweet #2" translatesAutoresizingMaskIntoConstraints="NO" id="GLW-hV-UJT">
+                                <rect key="frame" x="20" y="372" width="560" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="GLW-hV-UJT" secondAttribute="height" multiplier="35:8" id="Z4m-fy-zd6"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
-                        <color key="backgroundColor" red="0.90196079015731812" green="0.90196079015731812" blue="0.90196079015731812" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="GLW-hV-UJT" secondAttribute="trailing" id="0Y9-Ur-fzL"/>
                             <constraint firstItem="rE3-pc-RbA" firstAttribute="centerX" secondItem="CJx-13-Dtf" secondAttribute="centerX" id="5Am-uZ-gw4"/>
+                            <constraint firstItem="GLW-hV-UJT" firstAttribute="width" secondItem="GLW-hV-UJT" secondAttribute="height" multiplier="35:8" id="8Ue-wR-UTu"/>
+                            <constraint firstItem="GLW-hV-UJT" firstAttribute="centerX" secondItem="CJx-13-Dtf" secondAttribute="centerX" id="KGb-n6-Jcg"/>
+                            <constraint firstItem="GLW-hV-UJT" firstAttribute="top" secondItem="rE3-pc-RbA" secondAttribute="bottom" constant="8" id="RB5-dx-Knt"/>
                             <constraint firstItem="rE3-pc-RbA" firstAttribute="centerY" secondItem="CJx-13-Dtf" secondAttribute="centerY" id="a0g-cB-xji"/>
+                            <constraint firstItem="rE3-pc-RbA" firstAttribute="top" secondItem="GLW-hV-UJT" secondAttribute="bottom" constant="8" id="hUx-yx-OEw"/>
                             <constraint firstAttribute="trailingMargin" secondItem="rE3-pc-RbA" secondAttribute="trailing" id="jvl-KM-WjE"/>
                             <constraint firstAttribute="leadingMargin" secondItem="rE3-pc-RbA" secondAttribute="leading" id="lJu-UM-7Kl"/>
                             <constraint firstAttribute="leadingMargin" secondItem="rE3-pc-RbA" secondAttribute="leading" id="mYZ-1V-zOW"/>
                             <constraint firstAttribute="trailingMargin" secondItem="rE3-pc-RbA" secondAttribute="trailing" id="nph-Tx-1uk"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="GLW-hV-UJT" secondAttribute="leading" id="xEp-Oq-R3V"/>
                             <constraint firstItem="rE3-pc-RbA" firstAttribute="top" secondItem="elr-jh-BKY" secondAttribute="bottom" constant="70" id="zF7-Ax-3VK"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
+                                <exclude reference="hUx-yx-OEw"/>
                                 <exclude reference="jvl-KM-WjE"/>
                                 <exclude reference="lJu-UM-7Kl"/>
                                 <exclude reference="zF7-Ax-3VK"/>
+                                <exclude reference="8Ue-wR-UTu"/>
                             </mask>
                         </variation>
                     </view>
@@ -239,5 +259,6 @@
     <resources>
         <image name="SC Logo small-1" width="147" height="73"/>
         <image name="Tweet #1" width="1176" height="332"/>
+        <image name="Tweet #2" width="1176" height="328"/>
     </resources>
 </document>
