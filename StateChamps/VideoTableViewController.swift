@@ -10,21 +10,22 @@ import UIKit
 
 class VideoTableViewController: UITableViewController {
 
-    @IBOutlet var youTubeVideoTableView: UITableView!
+//    @IBOutlet var youTubeVideoTableView: UITableView!
     
-    let youTubeVideos = [video1,video2]
+    let youTubeVideos = [video1, video2, video3, video4, video5, video6, video7, video8, video9, video10]
     var youTubeVideoSelected = YouTubeVideos(title: "Chomper", publishedDate: "Jan 18, 2015", videoURL: "https://youtu.be/qmhtPEHLmEc")
     
     let youTubeVideoIdentifier = "YouTubeVideoIdentifier"
-    let videoIdentifier = "ShowVideoSegue"
+//    let videoIdentifier = "ShowVideoSegue"
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        tableView.reloadData()
     }
 
-    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        return 1
-    }
+//    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+//        return 1
+//    }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return youTubeVideos.count
@@ -47,21 +48,21 @@ class VideoTableViewController: UITableViewController {
     }
     
     
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if segue.identifier == videoIdentifier {
-            if let vc = segue.destinationViewController as? VideoViewController {
-                if let indexPath = tableView.indexPathForSelectedRow {
-                    let selectedVideo = youTubeVideos[indexPath.row]
-                    vc.selectedVideo = selectedVideo.videoURL!
-                }
-            }
-        }
-    }
-    
-    @IBAction func unwindForSegue(unwindSegue: UIStoryboardSegue) {
-        if(unwindSegue.sourceViewController .isKindOfClass(VideoViewController)) {
-        }
-    }
+//    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+//        if segue.identifier == videoIdentifier {
+//            if let vc = segue.destinationViewController as? VideoViewController {
+//                if let indexPath = tableView.indexPathForSelectedRow {
+//                    let selectedVideo = youTubeVideos[indexPath.row]
+//                    vc.selectedVideo = selectedVideo.videoURL!
+//                }
+//            }
+//        }
+//    }
+//    
+//    @IBAction func unwindForSegue(unwindSegue: UIStoryboardSegue) {
+//        if(unwindSegue.sourceViewController .isKindOfClass(VideoViewController)) {
+//        }
+//    }
 }
 
 
