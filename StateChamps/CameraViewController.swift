@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CameraViewController: UIViewController, UIImagePickerControllerDelegate {
+class CameraViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
     @IBOutlet weak var userImageView: UIImageView!
     
@@ -18,7 +18,7 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate {
         super.viewDidLoad()
         
         //imagepicker for camera and photo library access
-//        imagePicker.delegate = self
+        imagePicker.delegate = self
     }
 
 
@@ -38,18 +38,18 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate {
         dismissViewControllerAnimated(true) {
         }
     }
-    
-}
 
-//func takeANewPhoto(sender: UIButton) {
-//    if UIImagePickerController.availableCaptureModesForCameraDevice(.Rear) != nil {
-//        imagePicker.allowsEditing = false
-//        imagePicker.sourceType = UIImagePickerControllerSourceType.Camera
-//        imagePicker.cameraCaptureMode = .Photo
-//    }
-//        
-//    else if UIImagePickerController.availableCaptureModesForCameraDevice(.Front) != nil {
-//        imagePicker.allowsEditing = false
-//        imagePicker.sourceType = UIImagePickerControllerSourceType.Camera
-//        imagePicker.cameraCaptureMode = .Photo
-//}
+func takeANewPhoto(sender: UIButton) {
+    if UIImagePickerController.availableCaptureModesForCameraDevice(.Rear) != nil {
+        imagePicker.allowsEditing = false
+        imagePicker.sourceType = UIImagePickerControllerSourceType.Camera
+        imagePicker.cameraCaptureMode = .Photo
+    }
+        
+    else if UIImagePickerController.availableCaptureModesForCameraDevice(.Front) != nil {
+        imagePicker.allowsEditing = false
+        imagePicker.sourceType = UIImagePickerControllerSourceType.Camera
+        imagePicker.cameraCaptureMode = .Photo
+        }
+    }
+}

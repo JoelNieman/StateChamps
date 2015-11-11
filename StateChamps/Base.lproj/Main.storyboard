@@ -309,24 +309,30 @@
                                     <constraint firstAttribute="width" constant="40" id="acx-XZ-MTZ"/>
                                     <constraint firstAttribute="height" constant="40" id="btR-qQ-l31"/>
                                 </constraints>
-                                <state key="normal" title="Button" backgroundImage="Compact Camera-25"/>
+                                <state key="normal" backgroundImage="Compact Camera-25"/>
                                 <connections>
                                     <action selector="captureImageButton:" destination="20G-bv-YK8" eventType="touchDown" id="9yA-Am-eA2"/>
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="3fO-gV-tv3">
-                                <rect key="frame" x="20" y="15" width="560" height="528"/>
+                                <rect key="frame" x="20" y="20" width="560" height="523"/>
                             </imageView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.80000001192092896" green="0.80000001192092896" blue="0.80000001192092896" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="3fO-gV-tv3" firstAttribute="top" secondItem="jVO-gD-Mhh" secondAttribute="bottom" constant="-5" id="29s-p6-mrJ"/>
                             <constraint firstAttribute="leadingMargin" secondItem="3fO-gV-tv3" secondAttribute="leading" id="2DQ-5b-GMl"/>
+                            <constraint firstItem="3fO-gV-tv3" firstAttribute="top" secondItem="jVO-gD-Mhh" secondAttribute="bottom" id="FOa-kI-DNC"/>
                             <constraint firstItem="ffD-pm-P3Q" firstAttribute="top" secondItem="3fO-gV-tv3" secondAttribute="bottom" constant="8" id="eRX-z9-pNr"/>
                             <constraint firstItem="Ruz-jV-hGK" firstAttribute="centerX" secondItem="Ulc-n9-Cio" secondAttribute="centerX" id="iDh-Iw-rP5"/>
                             <constraint firstAttribute="trailingMargin" secondItem="3fO-gV-tv3" secondAttribute="trailing" id="rRZ-wQ-UZr"/>
                             <constraint firstItem="ffD-pm-P3Q" firstAttribute="top" secondItem="Ruz-jV-hGK" secondAttribute="bottom" constant="21" id="xht-KK-IAk"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="29s-p6-mrJ"/>
+                            </mask>
+                        </variation>
                     </view>
                     <tabBarItem key="tabBarItem" title="Camera" image="sample-908-target" id="20l-4J-yaR"/>
                     <connections>
