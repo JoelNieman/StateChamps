@@ -26,20 +26,27 @@
                                     <constraint firstAttribute="height" constant="73" id="E0Q-gm-hpt"/>
                                 </constraints>
                             </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5TV-he-aeD" customClass="YouTubePlayerView" customModule="YouTubePlayer">
+                                <rect key="frame" x="20" y="50" width="560" height="315"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="5TV-he-aeD" secondAttribute="height" multiplier="16:9" id="KKw-Ig-7r1"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Welcome to the State Champs! iOS App! " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yDh-5z-URH">
+                                <rect key="frame" x="108" y="427" width="384" height="24"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <color key="textColor" red="0.89411764705882357" green="0.10588235294117647" blue="0.15294117647058825" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <textView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" misplaced="YES" editable="NO" usesAttributedText="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OAk-ga-Dms">
-                                <rect key="frame" x="20" y="436" width="560" height="107"/>
+                                <rect key="frame" x="20" y="456" width="560" height="87"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="107" id="sjI-pZ-KB0"/>
                                 </constraints>
                                 <attributedString key="attributedText">
-                                    <fragment content="Welcome to the State Champs iOS App! ">
-                                        <attributes>
-                                            <font key="NSFont" size="16" name="HelveticaNeue"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
-                                        </attributes>
-                                    </fragment>
                                     <fragment>
-                                        <string key="content"> Here you will find all the news and media you've grown to love to keep you informed about Michigan HS Athletics. We'll update the app content as frequently as possible, but don't wait for us, upload your own videos and share with the community!</string>
+                                        <string key="content">Here you will find all the news and media you've grown to love to keep you informed about Michigan HS Athletics. We'll update the app content as frequently as possible, but don't wait for us, upload your own videos and share with the community!</string>
                                         <attributes>
                                             <font key="NSFont" size="14" name="HelveticaNeue"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
@@ -48,25 +55,26 @@
                                 </attributedString>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5TV-he-aeD" customClass="YouTubePlayerView" customModule="YouTubePlayer">
-                                <rect key="frame" x="20" y="50" width="560" height="315"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="5TV-he-aeD" secondAttribute="height" multiplier="16:9" id="KKw-Ig-7r1"/>
-                                </constraints>
-                            </view>
                         </subviews>
                         <color key="backgroundColor" red="0.80000001192092896" green="0.80000001192092896" blue="0.80000001192092896" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="5TV-he-aeD" secondAttribute="trailing" id="4CD-tn-XpB"/>
+                            <constraint firstItem="EO0-Wh-H4W" firstAttribute="top" secondItem="OAk-ga-Dms" secondAttribute="bottom" constant="40" id="61B-9N-SdS"/>
                             <constraint firstItem="OAk-ga-Dms" firstAttribute="top" secondItem="UOM-ng-XHg" secondAttribute="bottom" constant="23" id="9TT-d7-bde"/>
                             <constraint firstItem="UOM-ng-XHg" firstAttribute="centerY" secondItem="eTs-pF-rbh" secondAttribute="centerY" id="B3c-VM-Hm2"/>
                             <constraint firstAttribute="leadingMargin" secondItem="5TV-he-aeD" secondAttribute="leading" id="Jk6-Sj-vBe"/>
                             <constraint firstItem="UOM-ng-XHg" firstAttribute="centerX" secondItem="eTs-pF-rbh" secondAttribute="centerX" id="K3b-nx-uMH"/>
+                            <constraint firstItem="OAk-ga-Dms" firstAttribute="top" secondItem="yDh-5z-URH" secondAttribute="bottom" constant="5" id="Lpd-pX-Xxh"/>
                             <constraint firstItem="5TV-he-aeD" firstAttribute="top" secondItem="0vg-hJ-Nih" secondAttribute="bottom" constant="30" id="MKM-SI-Keq"/>
                             <constraint firstAttribute="trailingMargin" secondItem="OAk-ga-Dms" secondAttribute="trailing" id="Qhx-yE-xAA"/>
                             <constraint firstAttribute="leadingMargin" secondItem="OAk-ga-Dms" secondAttribute="leading" id="Vbb-MB-i4F"/>
+                            <constraint firstItem="yDh-5z-URH" firstAttribute="centerX" secondItem="eTs-pF-rbh" secondAttribute="centerX" id="cJQ-wz-Ayu"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="9TT-d7-bde"/>
+                            </mask>
+                        </variation>
                     </view>
                     <tabBarItem key="tabBarItem" title="Home" image="sample-504-doghouse" id="zTU-k9-K0y"/>
                     <connections>
