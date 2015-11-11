@@ -11,18 +11,20 @@ import UIKit
 class CameraViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
     @IBOutlet weak var userImageView: UIImageView!
+    @IBOutlet weak var disposeOfPictureOutlet: UIButton!
     
     let imagePicker = UIImagePickerController()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        captureImageButton()
         
         //imagepicker for camera and photo library access
         imagePicker.delegate = self
     }
 
 
-    @IBAction func captureImageButton(sender: AnyObject) {
+    func captureImageButton() {
         imagePicker.allowsEditing = true
         imagePicker.sourceType = .Camera
         
@@ -33,23 +35,30 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate, U
         if let pickedImage = info[UIImagePickerControllerOriginalImage] as? UIImage {
             userImageView!.contentMode = .ScaleAspectFit
             userImageView!.image = pickedImage
+            disposeOfPictureOutlet.hidden = false
         }
         
         dismissViewControllerAnimated(true) {
         }
     }
 
-func takeANewPhoto(sender: UIButton) {
-    if UIImagePickerController.availableCaptureModesForCameraDevice(.Rear) != nil {
-        imagePicker.allowsEditing = false
-        imagePicker.sourceType = UIImagePickerControllerSourceType.Camera
-        imagePicker.cameraCaptureMode = .Photo
-    }
-        
-    else if UIImagePickerController.availableCaptureModesForCameraDevice(.Front) != nil {
-        imagePicker.allowsEditing = false
-        imagePicker.sourceType = UIImagePickerControllerSourceType.Camera
-        imagePicker.cameraCaptureMode = .Photo
-        }
-    }
+//func takeANewPhoto(sender: UIButton) {
+//    if UIImagePickerController.availableCaptureModesForCameraDevice(.Rear) != nil {
+//        imagePicker.allowsEditing = false
+//        imagePicker.sourceType = UIImagePickerControllerSourceType.Camera
+//        imagePicker.cameraCaptureMode = .Photo
+//    }
+//        
+//    else if UIImagePickerController.availableCaptureModesForCameraDevice(.Front) != nil {
+//        imagePicker.allowsEditing = false
+//        imagePicker.sourceType = UIImagePickerControllerSourceType.Camera
+//        imagePicker.cameraCaptureMode = .Photo
+//        }
+//    }
+//    
+//    @IBAction func disposeOfPictureButton(sender: AnyObject) {
+//    }
+//    
+//    
+//    
 }
