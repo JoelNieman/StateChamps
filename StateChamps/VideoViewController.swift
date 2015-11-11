@@ -17,7 +17,7 @@ class VideoViewController: UIViewController, UITableViewDataSource, UITableViewD
     var selectedVideo: String = ""
     var selectedVideoURL = NSURL()
     
-    let youTubeVideos = [video1,video2]
+    let youTubeVideos = [video1, video2, video3, video4, video5, video6, video7, video8, video9, video10]
     var youTubeVideoSelected = video1
     
     let youTubeVideoIdentifier = "YouTubeVideoIdentifier"
