@@ -7,17 +7,15 @@
 //
 
 import Foundation
-import UIKit
 import CoreLocation
-import MapKit
 
-class EventLocation {
-    var locationName = String()
-    var dateAndTime = String()
+struct EventLocation {
+    var locationName     = String()
+    var dateAndTime      = String()
     var eventDescription = String()
     
-    var eventLatitude = CLLocationDegrees()
-    var eventLongitude = CLLocationDegrees()
+    var eventLatitude    = CLLocationDegrees()
+    var eventLongitude   = CLLocationDegrees()
     
     var eventLocationCoordinates: CLLocationCoordinate2D  {
         get {
@@ -35,18 +33,20 @@ let location1 = EventLocation(locationName: "Cass Technical High School",
 let location2 = EventLocation(locationName: "Allen Park High School",
     dateAndTime: "November 13th: 7pm",
     eventDescription: "The Allen Park Jaguars football team has a neutral playoff game vs. The Chelsea Bulldogs",
-    eventLatitute: 42.248952,
+    eventLatitude: 42.248952,
     eventLongitude: -83.227267)
 
 let location3 = EventLocation(locationName: "Detroit Martin Luther King High School",
     dateAndTime: "November 14th: 1pm",
     eventDescription: "The Detroit Martin Luther King Crusaders football team has a neutral playoff game vs. Detroit East English Bulldogs",
-    eventLatitute: 42.343800,
+    eventLatitude: 42.343800,
     eventLongitude: -83.016306)
 
 let location4 = EventLocation(locationName: "Berkley High School",
     dateAndTime: "November 13th: 7pm",
     eventDescription: "The Berkley Bears football team has a neutral playoff game vs. Livonia Franklin Patriots",
-    eventLatitute: 42.495668,
+    eventLatitude: 42.495668,
     eventLongitude: -83.180513)
+
+let eventLocations = [location1,location2,location3,location4]
 

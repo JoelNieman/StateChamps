@@ -259,7 +259,7 @@
         <!--Map-->
         <scene sceneID="hFb-Wd-5Sf">
             <objects>
-                <viewController id="zdr-rU-pFk" sceneMemberID="viewController">
+                <viewController id="zdr-rU-pFk" customClass="EventLocationViewController" customModule="StateChamps" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="hKS-xm-gGL"/>
                         <viewControllerLayoutGuide type="bottom" id="71x-RC-v2X"/>
@@ -281,6 +281,9 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Map" image="sample-881-globe" id="p46-Hy-uvU"/>
+                    <connections>
+                        <outlet property="eventLocationMap" destination="suu-CF-4SK" id="Gzc-Jj-978"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="o4G-tp-1hF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
