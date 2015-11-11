@@ -10,7 +10,7 @@ import UIKit
 
 class VideoTableViewController: UITableViewController {
 
-    @IBOutlet var youTubeVideoTableView: UITableView!
+//    @IBOutlet var youTubeVideoTableView: UITableView!
     
     let youTubeVideos = [video1,video2]
     var youTubeVideoSelected = YouTubeVideos(title: "Chomper", publishedDate: "Jan 18, 2015", videoURL: "https://youtu.be/qmhtPEHLmEc")
