@@ -11,6 +11,7 @@
 		5DB3CAAC1BF140BE00D76817 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5DB3CAAB1BF140BE00D76817 /* Assets.xcassets */; settings = {ASSET_TAGS = (); }; };
 		5DB3CAB11BF28D4B00D76817 /* EventLocations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DB3CAB01BF28D4B00D76817 /* EventLocations.swift */; settings = {ASSET_TAGS = (); }; };
 		5DB3CAB31BF2995C00D76817 /* EventLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DB3CAB21BF2995C00D76817 /* EventLocationViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		5DB3CAB51BF39AF100D76817 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DB3CAB41BF39AF100D76817 /* CameraViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		5DBCF9BE1BE7FD30001C45B4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DBCF9BD1BE7FD30001C45B4 /* AppDelegate.swift */; };
 		5DBCF9C31BE7FD30001C45B4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5DBCF9C11BE7FD30001C45B4 /* Main.storyboard */; };
 		5DBCF9C81BE7FD30001C45B4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5DBCF9C61BE7FD30001C45B4 /* LaunchScreen.storyboard */; };
@@ -45,6 +46,7 @@
 		5DB3CAAB1BF140BE00D76817 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5DB3CAB01BF28D4B00D76817 /* EventLocations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventLocations.swift; sourceTree = "<group>"; };
 		5DB3CAB21BF2995C00D76817 /* EventLocationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventLocationViewController.swift; sourceTree = "<group>"; };
+		5DB3CAB41BF39AF100D76817 /* CameraViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
 		5DBCF9BA1BE7FD30001C45B4 /* StateChamps.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StateChamps.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5DBCF9BD1BE7FD30001C45B4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5DBCF9C21BE7FD30001C45B4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -150,6 +152,7 @@
 				5DC385311BED49B00052E4B8 /* VideoTableViewController.swift */,
 				5DC385331BED4A630052E4B8 /* VideoViewController.swift */,
 				5DB3CAB21BF2995C00D76817 /* EventLocationViewController.swift */,
+				5DB3CAB41BF39AF100D76817 /* CameraViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -366,6 +369,7 @@
 				5DC3852C1BEBA4970052E4B8 /* YouTubeVideos.swift in Sources */,
 				5DB3CAB31BF2995C00D76817 /* EventLocationViewController.swift in Sources */,
 				5DC384AD1BE9852D0052E4B8 /* HomeViewController.swift in Sources */,
+				5DB3CAB51BF39AF100D76817 /* CameraViewController.swift in Sources */,
 				5DC385341BED4A630052E4B8 /* VideoViewController.swift in Sources */,
 				5DC385321BED49B00052E4B8 /* VideoTableViewController.swift in Sources */,
 			);
@@ -509,6 +513,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = StateChamps/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.JoelNieman.StateChamps;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -521,6 +526,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = StateChamps/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.JoelNieman.StateChamps;
 				PRODUCT_NAME = "$(TARGET_NAME)";

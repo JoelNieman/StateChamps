@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Nbk-Sg-bt8">
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -74,7 +75,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YmL-N5-C7f" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="586" y="-1043"/>
+            <point key="canvasLocation" x="586" y="-1291"/>
         </scene>
         <!--Videos-->
         <scene sceneID="Ze0-QT-c5c">
@@ -110,7 +111,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vxp-7G-Jo4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1310" y="-385"/>
+            <point key="canvasLocation" x="1322" y="-613"/>
         </scene>
         <!--Video View Controller-->
         <scene sceneID="Ft1-RC-1bX">
@@ -159,7 +160,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9oN-aX-Ell" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="m2x-mv-hkO" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1999" y="-385"/>
+            <point key="canvasLocation" x="2043" y="-613"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="erk-bJ-65R">
@@ -173,6 +174,7 @@
                     <connections>
                         <segue destination="TV1-Py-ctq" kind="relationship" relationship="viewControllers" id="kEX-x9-UTF"/>
                         <segue destination="zvj-9V-YQn" kind="relationship" relationship="viewControllers" id="gPB-v5-UJ8"/>
+                        <segue destination="20G-bv-YK8" kind="relationship" relationship="viewControllers" id="UFl-Kt-3eP"/>
                         <segue destination="cXa-QH-wmK" kind="relationship" relationship="viewControllers" id="y42-77-OVS"/>
                         <segue destination="zdr-rU-pFk" kind="relationship" relationship="viewControllers" id="wKc-DU-qXj"/>
                     </connections>
@@ -197,7 +199,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="irj-dk-tzP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="586" y="-385"/>
+            <point key="canvasLocation" x="586" y="-613"/>
         </scene>
         <!--News-->
         <scene sceneID="EAO-wM-PhL">
@@ -254,7 +256,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wqL-hq-2Qo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="586" y="292"/>
+            <point key="canvasLocation" x="586" y="68"/>
         </scene>
         <!--Map-->
         <scene sceneID="hFb-Wd-5Sf">
@@ -287,10 +289,63 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="o4G-tp-1hF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="582" y="970"/>
+            <point key="canvasLocation" x="586" y="750"/>
+        </scene>
+        <!--Camera-->
+        <scene sceneID="GWa-PT-rmR">
+            <objects>
+                <viewController id="20G-bv-YK8" customClass="CameraViewController" customModule="StateChamps" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jVO-gD-Mhh"/>
+                        <viewControllerLayoutGuide type="bottom" id="ffD-pm-P3Q"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Ulc-n9-Cio">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ruz-jV-hGK">
+                                <rect key="frame" x="280" y="490" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="40" id="acx-XZ-MTZ"/>
+                                    <constraint firstAttribute="height" constant="40" id="btR-qQ-l31"/>
+                                </constraints>
+                                <state key="normal" backgroundImage="Compact Camera-25"/>
+                                <connections>
+                                    <action selector="captureImageButton:" destination="20G-bv-YK8" eventType="touchDown" id="9yA-Am-eA2"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="3fO-gV-tv3">
+                                <rect key="frame" x="20" y="20" width="560" height="523"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.80000001192092896" green="0.80000001192092896" blue="0.80000001192092896" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="3fO-gV-tv3" firstAttribute="top" secondItem="jVO-gD-Mhh" secondAttribute="bottom" constant="-5" id="29s-p6-mrJ"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="3fO-gV-tv3" secondAttribute="leading" id="2DQ-5b-GMl"/>
+                            <constraint firstItem="3fO-gV-tv3" firstAttribute="top" secondItem="jVO-gD-Mhh" secondAttribute="bottom" id="FOa-kI-DNC"/>
+                            <constraint firstItem="ffD-pm-P3Q" firstAttribute="top" secondItem="3fO-gV-tv3" secondAttribute="bottom" constant="8" id="eRX-z9-pNr"/>
+                            <constraint firstItem="Ruz-jV-hGK" firstAttribute="centerX" secondItem="Ulc-n9-Cio" secondAttribute="centerX" id="iDh-Iw-rP5"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="3fO-gV-tv3" secondAttribute="trailing" id="rRZ-wQ-UZr"/>
+                            <constraint firstItem="ffD-pm-P3Q" firstAttribute="top" secondItem="Ruz-jV-hGK" secondAttribute="bottom" constant="21" id="xht-KK-IAk"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="29s-p6-mrJ"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Camera" image="sample-908-target" id="20l-4J-yaR"/>
+                    <connections>
+                        <outlet property="userImageView" destination="3fO-gV-tv3" id="L4B-xx-tYQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cMO-kq-kvQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="580" y="1448"/>
         </scene>
     </scenes>
     <resources>
+        <image name="Compact Camera-25" width="25" height="25"/>
         <image name="SC Logo small-1" width="147" height="73"/>
         <image name="Tweet #1" width="1176" height="332"/>
         <image name="Tweet #2" width="1176" height="328"/>
@@ -298,5 +353,6 @@
         <image name="sample-504-doghouse" width="28" height="28"/>
         <image name="sample-583-broadcast" width="28" height="29"/>
         <image name="sample-881-globe" width="28" height="28"/>
+        <image name="sample-908-target" width="28" height="28"/>
     </resources>
 </document>
