@@ -11,7 +11,7 @@ import UIKit
 class CameraViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
     @IBOutlet weak var userImageView: UIImageView!
-    @IBOutlet weak var disposeOfPictureOutlet: UIButton!
+//    @IBOutlet weak var disposeOfPictureOutlet: UIButton!
     
     let imagePicker = UIImagePickerController()
     
@@ -35,7 +35,7 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate, U
         if let pickedImage = info[UIImagePickerControllerOriginalImage] as? UIImage {
             userImageView!.contentMode = .ScaleAspectFit
             userImageView!.image = pickedImage
-            disposeOfPictureOutlet.hidden = false
+//            disposeOfPictureOutlet.hidden = false
         }
         
         dismissViewControllerAnimated(true) {
@@ -58,7 +58,8 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate, U
 //    
 //    @IBAction func disposeOfPictureButton(sender: AnyObject) {
 //    }
-//    
-//    
-//    
+
+    
+    
+    
 }
