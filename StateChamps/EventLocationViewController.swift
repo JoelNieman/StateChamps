@@ -30,7 +30,8 @@ class EventLocationViewController: UIViewController, CLLocationManagerDelegate, 
         for i in 0..<eventLocations.count {
             let location = MKPointAnnotation()
             location.coordinate = eventLocations[i].eventLocationCoordinates
-            location.title = String("\(eventLocations[i].locationName)\n\(eventLocations[i].eventDescription)")
+            location.title = String("\(eventLocations[i].locationName)")
+//            location.description = String("\(eventLocations[i].eventDescription)")
 
             collectionOfLocations.append(location)
         }
