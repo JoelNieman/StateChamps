@@ -278,8 +278,8 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oof-NO-ACM">
-                                <rect key="frame" x="20" y="406" width="507.5" height="116"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oof-NO-ACM">
+                                <rect key="frame" x="20" y="406" width="560" height="116"/>
                                 <accessibility key="accessibilityConfiguration">
                                     <accessibilityTraits key="traits" button="YES" image="YES"/>
                                 </accessibility>
@@ -397,7 +397,7 @@
                             </mask>
                         </variation>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Camera" image="sample-908-target" id="20l-4J-yaR"/>
+                    <tabBarItem key="tabBarItem" title="Camera" image="Compact Camera-25" id="20l-4J-yaR"/>
                     <connections>
                         <outlet property="userImageView" destination="3fO-gV-tv3" id="L4B-xx-tYQ"/>
                     </connections>
@@ -408,6 +408,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Compact Camera-25" width="25" height="25"/>
         <image name="SC Logo 375pxl" width="375" height="189"/>
         <image name="Tweet 3hrs" width="1178" height="226"/>
         <image name="Tweet 3hrs (2)" width="1176" height="332"/>
@@ -415,6 +416,5 @@
         <image name="sample-504-doghouse" width="28" height="28"/>
         <image name="sample-583-broadcast" width="28" height="29"/>
         <image name="sample-881-globe" width="28" height="28"/>
-        <image name="sample-908-target" width="28" height="28"/>
     </resources>
 </document>
