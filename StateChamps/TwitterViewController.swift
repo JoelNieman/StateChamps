@@ -9,26 +9,33 @@
 import UIKit
 
 class TwitterViewController: UIViewController {
+    
+    //  This view controller will be used to 1) allow the user to post to twitter and 2) see the latest twitter posts by State Champs
 
     @IBOutlet weak var userInputTweetField: UITextView!
     @IBOutlet weak var tweetCharacterCount: UITextField!
-
-    @IBOutlet weak var tweet2: UIButton!
     
-    var tweetCharacters = Int()
-    let characterLimit = 140
+    //  These items will be used later to count and limit the number of characters to 140
+    //  Need to figure out how to count the characters in a Text View (it's different than a text field)
+    
+//    var tweetCharacters = Int()
+//    let characterLimit = 140
+    
+    //  Working on setting up the tweets. They should change when touched.
+
+//    @IBOutlet weak var tweet2: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-    }
+    
+    //  Twitter API doesn't work yet. This is just representative functionality.
     
     @IBAction func submitTweetButton(sender: AnyObject) {
         areYouSureAlert()
     }
+    
+    //  Gets rid of keyboard.
 
     @IBAction func stateChampsButton(sender: AnyObject) {
         userInputTweetField.resignFirstResponder()
@@ -49,8 +56,9 @@ class TwitterViewController: UIViewController {
         }))
         self.presentViewController(alertController, animated: true, completion: nil)
     }
-    @IBAction func tweet2ButtonPressed(sender: AnyObject) {
-        tweet2.imageView = 
-        
-    }
+
+    //   Working on changing the tweets when touching the image. 
+    
+//    @IBAction func tweet2ButtonPressed(sender: AnyObject) {
+//    }
 }

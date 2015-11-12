@@ -20,6 +20,8 @@ class HomeViewController: UIViewController {
         loadVideo()
     }
     
+    //  This sets up the video. The values (0 or 1) change the properties of the video player
+    
     func loadVideo() {
         playerView.playerVars = [
             "playsinline": "1",
@@ -28,10 +30,4 @@ class HomeViewController: UIViewController {
         ]
         playerView.loadVideoURL(myVideoURL!)
     }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
 }
