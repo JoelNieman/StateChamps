@@ -14,20 +14,18 @@ class VideoViewController: UIViewController, UITableViewDataSource, UITableViewD
     @IBOutlet weak var videoTableView: UITableView!
     @IBOutlet weak var videoPlayer: YouTubePlayerView!
     
-    var selectedVideo: String = ""
-    var selectedVideoURL = NSURL()
-    
+    //  This is my collection of objects. They are created on the "YouTubeVideos.swift" file in the model folder.
     let youTubeVideos = [video1, video2, video3, video4, video5, video6, video7, video8, video9, video10]
+    
+    //  I'm initializing the first video in the player as video1
     var youTubeVideoSelected = video1
-    
-    let youTubeVideoIdentifier = "YouTubeVideoIdentifier"
-    let videoIdentifier = "ShowVideoSegue"
-    
 
     override func viewDidLoad() {
         super.viewDidLoad()
         loadVideo()
     }
+    
+    //  Same function from the HomeViewController. Works the same.
     
     func loadVideo() {
         let selectedVideoURL = NSURL(string: youTubeVideoSelected.videoURL!)!
@@ -39,6 +37,8 @@ class VideoViewController: UIViewController, UITableViewDataSource, UITableViewD
         ]
         videoPlayer.loadVideoURL(selectedVideoURL)
     }
+    
+    //  TableView set-up section
 
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1
@@ -53,10 +53,11 @@ class VideoViewController: UIViewController, UITableViewDataSource, UITableViewD
         var cell = tableView.dequeueReusableCellWithIdentifier("tableCell") as UITableViewCell!
         
         if (cell == nil) {
-            cell = UITableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: "tableCell")
+            cell = UITableViewCell(style: UITableViewCellStyle.Subtitle, reuseIdentifier: "tableCell")
         }
         
         cell.textLabel?.text = youTubeVideos[indexPath.row].title
+        cell.detailTextLabel?.text = youTubeVideos[indexPath.row].publishedDate
         return cell
     }
     
@@ -64,18 +65,6 @@ class VideoViewController: UIViewController, UITableViewDataSource, UITableViewD
         youTubeVideoSelected = youTubeVideos[indexPath.row]
         loadVideo()
     }
-    
-    
-//    func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-//        if segue.identifier == videoIdentifier {
-//            if let vc = segue.destinationViewController as? VideoViewController {
-//                if let indexPath = tableView.indexPathForSelectedRow {
-//                    let selectedVideo = youTubeVideos[indexPath.row]
-//                    vc.selectedVideo = selectedVideo.videoURL!
-//                }
-//            }
-//        }
-//    }
 }
 
 
