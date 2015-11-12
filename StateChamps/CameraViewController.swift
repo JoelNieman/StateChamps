@@ -14,7 +14,6 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate, U
     //  Modeling it after the instagram image capture feature.
     
     @IBOutlet weak var userImageView: UIImageView!
-//    @IBOutlet weak var disposeOfPictureOutlet: UIButton!
     
     let imagePicker = UIImagePickerController()
     

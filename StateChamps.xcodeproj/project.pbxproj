@@ -8,19 +8,19 @@
 
 /* Begin PBXBuildFile section */
 		239FD4BE3D415E13E204C228 /* Pods_StateChamps.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2177078DE9E483163287C5F0 /* Pods_StateChamps.framework */; };
-		5DB3CAAC1BF140BE00D76817 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5DB3CAAB1BF140BE00D76817 /* Assets.xcassets */; settings = {ASSET_TAGS = (); }; };
-		5DB3CAB11BF28D4B00D76817 /* EventLocations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DB3CAB01BF28D4B00D76817 /* EventLocations.swift */; settings = {ASSET_TAGS = (); }; };
-		5DB3CAB31BF2995C00D76817 /* EventLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DB3CAB21BF2995C00D76817 /* EventLocationViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		5DB3CAB51BF39AF100D76817 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DB3CAB41BF39AF100D76817 /* CameraViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		5DB3CAAC1BF140BE00D76817 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5DB3CAAB1BF140BE00D76817 /* Assets.xcassets */; };
+		5DB3CAB11BF28D4B00D76817 /* EventLocations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DB3CAB01BF28D4B00D76817 /* EventLocations.swift */; };
+		5DB3CAB31BF2995C00D76817 /* EventLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DB3CAB21BF2995C00D76817 /* EventLocationViewController.swift */; };
+		5DB3CAB51BF39AF100D76817 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DB3CAB41BF39AF100D76817 /* CameraViewController.swift */; };
 		5DBCF9BE1BE7FD30001C45B4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DBCF9BD1BE7FD30001C45B4 /* AppDelegate.swift */; };
 		5DBCF9C31BE7FD30001C45B4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5DBCF9C11BE7FD30001C45B4 /* Main.storyboard */; };
 		5DBCF9C81BE7FD30001C45B4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5DBCF9C61BE7FD30001C45B4 /* LaunchScreen.storyboard */; };
 		5DBCF9D31BE7FD30001C45B4 /* StateChampsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DBCF9D21BE7FD30001C45B4 /* StateChampsTests.swift */; };
 		5DBCF9DE1BE7FD30001C45B4 /* StateChampsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DBCF9DD1BE7FD30001C45B4 /* StateChampsUITests.swift */; };
-		5DC384AD1BE9852D0052E4B8 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DC384AC1BE9852D0052E4B8 /* HomeViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		5DC3852C1BEBA4970052E4B8 /* YouTubeVideos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DC3852B1BEBA4970052E4B8 /* YouTubeVideos.swift */; settings = {ASSET_TAGS = (); }; };
-		5DC385341BED4A630052E4B8 /* VideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DC385331BED4A630052E4B8 /* VideoViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		5DFEE7C91BF407A8001E468D /* TwitterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DFEE7C81BF407A8001E468D /* TwitterViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		5DC384AD1BE9852D0052E4B8 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DC384AC1BE9852D0052E4B8 /* HomeViewController.swift */; };
+		5DC3852C1BEBA4970052E4B8 /* YouTubeVideos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DC3852B1BEBA4970052E4B8 /* YouTubeVideos.swift */; };
+		5DC385341BED4A630052E4B8 /* VideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DC385331BED4A630052E4B8 /* VideoViewController.swift */; };
+		5DFEE7C91BF407A8001E468D /* TwitterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DFEE7C81BF407A8001E468D /* TwitterViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -253,6 +253,7 @@
 				TargetAttributes = {
 					5DBCF9B91BE7FD30001C45B4 = {
 						CreatedOnToolsVersion = 7.0;
+						DevelopmentTeam = FGQB5UTP7A;
 					};
 					5DBCF9CD1BE7FD30001C45B4 = {
 						CreatedOnToolsVersion = 7.0;
@@ -512,11 +513,14 @@
 			baseConfigurationReference = 161A5B18AE5A0D641CA2831C /* Pods-StateChamps.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = StateChamps/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.JoelNieman.StateChamps;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -525,11 +529,14 @@
 			baseConfigurationReference = A5EC636D377A2B883CEBFA74 /* Pods-StateChamps.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = StateChamps/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.JoelNieman.StateChamps;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
