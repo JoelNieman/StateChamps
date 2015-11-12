@@ -14,8 +14,8 @@ class VideoViewController: UIViewController, UITableViewDataSource, UITableViewD
     @IBOutlet weak var videoTableView: UITableView!
     @IBOutlet weak var videoPlayer: YouTubePlayerView!
     
-    //  This is my collection of objects. They are created on the "YouTubeVideos.swift" file in the model folder.
-    let youTubeVideos = [video1, video2, video3, video4, video5, video6, video7, video8, video9, video10]
+    //  This initializes my video collection from the "YouTubeVideos.swift" file in the model folder.
+    let youTubeVideos = (youTubeVideoCollection)
     
     //  I'm initializing the first video in the player as video1
     var youTubeVideoSelected = video1
@@ -60,6 +60,8 @@ class VideoViewController: UIViewController, UITableViewDataSource, UITableViewD
         cell.detailTextLabel?.text = youTubeVideos[indexPath.row].publishedDate
         return cell
     }
+    
+    //  LoadVideo() in didSelectRowAtIndexPath updates the video player with the selected video URL.
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         youTubeVideoSelected = youTubeVideos[indexPath.row]

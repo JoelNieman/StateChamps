@@ -24,6 +24,8 @@ struct EventLocation {
     }
 }
 
+//  These objects are outside of the class, making them globally available. It's just neater for them to be in this file.
+
 let location1 = EventLocation(locationName: "Cass Technical High School",
     dateAndTime: "November 13th: 7pm",
     eventDescription: "The Cass Tech Technicians football team has a neutral playoff game vs. The Dakota Cougars",

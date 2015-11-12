@@ -17,6 +17,8 @@ class EventLocationViewController: UIViewController, CLLocationManagerDelegate, 
     let locationManager = CLLocationManager()
     var collectionOfLocations = [MKAnnotation]()
     
+    //  standard mapview set-up in viewDidLoad
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -26,6 +28,9 @@ class EventLocationViewController: UIViewController, CLLocationManagerDelegate, 
         locationManager.startUpdatingLocation()
         
         setupEventLocationMap()
+        
+    // For-In loop goes through the eventLocations array in the EventLocations.swift file
+    // and appends a pin for each location into the collectionOfLocations
         
         for i in 0..<eventLocations.count {
             let location = MKPointAnnotation()
@@ -38,7 +43,8 @@ class EventLocationViewController: UIViewController, CLLocationManagerDelegate, 
         eventLocationMap.addAnnotations(collectionOfLocations)
     }
     
-    
+    //  SetupEventLocationMap sets the default location to Grand Circus for simulation.
+    //  Will need to be updated to user's current location before deploying.
     
     func setupEventLocationMap() {
         let startLocation = CLLocationCoordinate2D(latitude: 42.335879, longitude: -83.049745)

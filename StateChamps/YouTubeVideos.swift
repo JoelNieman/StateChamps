@@ -8,6 +8,8 @@
 
 import Foundation
 
+//  Set this up as a class because I might later use inheritence to sort (i.e., categories)
+
 class YouTubeVideos {
     var title: String?
     var publishedDate:String?
@@ -22,7 +24,7 @@ class YouTubeVideos {
 
 
 
-
+//  These objects are outside of the class, making them globally available. It's just neater for them to be in this file.
 
 let video1 = YouTubeVideos(title: "Prep Sport Junkies Week 11", publishedDate: "Nov 10, 2015", videoURL: "https://youtu.be/osGxhh0Bxlg")
 
@@ -43,3 +45,5 @@ let video8 = YouTubeVideos(title: "West Side Elite Week 11", publishedDate: "Nov
 let video9 = YouTubeVideos(title: "High School Weekend Wrap-Up 10-2015", publishedDate: "Nov 4, 2015", videoURL: "https://youtu.be/kwOvBtYsNP4")
 
 let video10 = YouTubeVideos(title: "College Football 2015-Craziest Ending To A Football You'll Ever See", publishedDate: "Oct 17, 2015", videoURL: "https://youtu.be/gxbUqaVoDeQ")
+
+let youTubeVideoCollection = [video1,video2,video3,video4,video5,video6,video7,video8,video9,video10]
