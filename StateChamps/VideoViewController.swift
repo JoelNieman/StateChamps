@@ -13,6 +13,7 @@ class VideoViewController: UIViewController, UITableViewDataSource, UITableViewD
 
     @IBOutlet weak var videoTableView: UITableView!
     @IBOutlet weak var videoPlayer: YouTubePlayerView!
+    @IBOutlet weak var videoSelectionLabel: UILabel!
     
     //  This initializes my video collection from the "YouTubeVideos.swift" file in the model folder.
     let youTubeVideos = (youTubeVideoCollection)
@@ -23,6 +24,7 @@ class VideoViewController: UIViewController, UITableViewDataSource, UITableViewD
     override func viewDidLoad() {
         super.viewDidLoad()
         loadVideo()
+        videoSelectionLabel.text! = String(video1.title!)
     }
     
     //  Same function from the HomeViewController. Works the same.
@@ -66,6 +68,7 @@ class VideoViewController: UIViewController, UITableViewDataSource, UITableViewD
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         youTubeVideoSelected = youTubeVideos[indexPath.row]
         loadVideo()
+        videoSelectionLabel.text! = String(youTubeVideoSelected.title!)
     }
 }
 
