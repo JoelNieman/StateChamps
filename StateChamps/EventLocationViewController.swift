@@ -52,5 +52,45 @@ class EventLocationViewController: UIViewController, CLLocationManagerDelegate, 
         let region = MKCoordinateRegion(center: startLocation, span: span)
         eventLocationMap.setRegion(region, animated: false)
     }
+    
 
+    
+    
+//
+//    // Helper function to load some options in native maps
+//    func openInMapsTransit(coordinate: CLLocationCoordinate2D)  {
+//        
+//        let placemark = MKPlacemark(coordinate: coordinate, addressDictionary: nil)
+//        let mapItem = MKMapItem(placemark: placemark)
+//        mapItem.name = collectionOfLocations
+//        let launchOptions = [MKLaunchOptionsDirectionsModeKey:MKLaunchOptionsDirectionsModeWalking]
+//        mapItem.openInMapsWithLaunchOptions(launchOptions)
+//    }
+//    
+//    // pull parking location and load with options in native maps
+//    @IBAction func openAppleMaps(sender: AnyObject) {
+//        
+//        if let loadedParkingSpot = defaults.dataForKey("parkingSpot") {
+//            if let loadedParkingSpot = NSKeyedUnarchiver.unarchiveObjectWithData(loadedParkingSpot) as? CLLocation {
+//                let savedParkingSpot = CLLocationCoordinate2DMake(loadedParkingSpot.coordinate.latitude, loadedParkingSpot.coordinate.longitude)
+//                openInMapsTransit(savedParkingSpot)
+//            }
+//        }
+//    }
+//    
+//    //map style choices and function to choose them
+//    enum MapType: Int {
+//        case Standard = 0
+//        case Satellite
+//    }
+//    
+//    @IBAction func updateMapStyle(sender: AnyObject) {
+//        let mapType = MapType(rawValue: mapStyleChoices.selectedSegmentIndex)
+//        switch (mapType!) {
+//        case .Standard:
+//            mapView.mapType = MKMapType.Standard
+//        case .Satellite:
+//            mapView.mapType = MKMapType.Satellite
+//        }
+//    }
 }
