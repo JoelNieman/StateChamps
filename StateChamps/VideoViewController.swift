@@ -41,6 +41,9 @@ class VideoViewController: UIViewController, UITableViewDataSource, UITableViewD
     }
     
     //  TableView set-up section
+    
+    //  Considering setting this up to a 2 section table
+    //  1 for State Champs! media and another for user uploads.
 
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1

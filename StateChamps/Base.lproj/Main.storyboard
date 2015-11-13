@@ -348,13 +348,23 @@
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="suu-CF-4SK">
                                 <rect key="frame" x="20" y="70" width="560" height="387"/>
                             </mapView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JNd-Q3-GZa">
+                                <rect key="frame" x="20" y="513" width="560" height="30"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Get Directions">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.60000002384185791" green="0.60000002384185791" blue="0.60000002384185791" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="suu-CF-4SK" firstAttribute="centerX" secondItem="orp-1P-l8w" secondAttribute="centerX" id="6ap-1D-piq"/>
                             <constraint firstAttribute="leadingMargin" secondItem="suu-CF-4SK" secondAttribute="leading" id="6j6-4H-gom"/>
+                            <constraint firstItem="71x-RC-v2X" firstAttribute="top" secondItem="JNd-Q3-GZa" secondAttribute="bottom" constant="8" id="81J-oo-vL7"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="JNd-Q3-GZa" secondAttribute="trailing" id="P2n-ia-SqI"/>
                             <constraint firstItem="71x-RC-v2X" firstAttribute="top" secondItem="suu-CF-4SK" secondAttribute="bottom" constant="94" id="Q6H-w2-aVJ"/>
                             <constraint firstItem="suu-CF-4SK" firstAttribute="top" secondItem="hKS-xm-gGL" secondAttribute="bottom" constant="50" id="fcA-TC-brr"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="JNd-Q3-GZa" secondAttribute="leading" id="lTU-lg-oim"/>
                             <constraint firstAttribute="trailingMargin" secondItem="suu-CF-4SK" secondAttribute="trailing" id="rId-kh-2dS"/>
                         </constraints>
                     </view>
@@ -382,13 +392,23 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="3fO-gV-tv3">
                                 <rect key="frame" x="20" y="20" width="560" height="523"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UPx-1y-E8h">
+                                <rect key="frame" x="20" y="513" width="560" height="30"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Upload">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.70196080207824707" green="0.70196080207824707" blue="0.70196080207824707" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="3fO-gV-tv3" firstAttribute="top" secondItem="jVO-gD-Mhh" secondAttribute="bottom" constant="-5" id="29s-p6-mrJ"/>
                             <constraint firstAttribute="leadingMargin" secondItem="3fO-gV-tv3" secondAttribute="leading" id="2DQ-5b-GMl"/>
+                            <constraint firstItem="ffD-pm-P3Q" firstAttribute="top" secondItem="UPx-1y-E8h" secondAttribute="bottom" constant="8" id="3jv-Jm-jnR"/>
                             <constraint firstItem="3fO-gV-tv3" firstAttribute="top" secondItem="jVO-gD-Mhh" secondAttribute="bottom" id="FOa-kI-DNC"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="UPx-1y-E8h" secondAttribute="trailing" id="MG3-v4-6la"/>
                             <constraint firstItem="ffD-pm-P3Q" firstAttribute="top" secondItem="3fO-gV-tv3" secondAttribute="bottom" constant="8" id="eRX-z9-pNr"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="UPx-1y-E8h" secondAttribute="leading" id="eoA-nP-8t1"/>
                             <constraint firstAttribute="trailingMargin" secondItem="3fO-gV-tv3" secondAttribute="trailing" id="rRZ-wQ-UZr"/>
                         </constraints>
                         <variation key="default">

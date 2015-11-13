@@ -16,6 +16,8 @@ class EventLocationViewController: UIViewController, CLLocationManagerDelegate, 
     
     let locationManager = CLLocationManager()
     var collectionOfLocations = [MKAnnotation]()
+//    var broadcastEventLocation = EventLocations.eventLocation
+//    var broadcastEventLocations = [broadcastEventLocation]
     
     //  standard mapview set-up in viewDidLoad
     
@@ -29,11 +31,12 @@ class EventLocationViewController: UIViewController, CLLocationManagerDelegate, 
         
         setupEventLocationMap()
         
-    // For-In loop goes through the eventLocations array in the EventLocations.swift file
-    // and appends a pin for each location into the collectionOfLocations
+//     For-In loop goes through the eventLocations array in the EventLocations.swift file
+//     and appends a pin for each location into the collectionOfLocations
         
         for i in 0..<eventLocations.count {
             let location = MKPointAnnotation()
+//            broadcastEventLocation = eventLocations()
             location.coordinate = eventLocations[i].eventLocationCoordinates
             location.title = String("\(eventLocations[i].locationName)")
 //            location.description = String("\(eventLocations[i].eventDescription)")
@@ -56,13 +59,13 @@ class EventLocationViewController: UIViewController, CLLocationManagerDelegate, 
 
     
     
-//
+
 //    // Helper function to load some options in native maps
 //    func openInMapsTransit(coordinate: CLLocationCoordinate2D)  {
 //        
 //        let placemark = MKPlacemark(coordinate: coordinate, addressDictionary: nil)
 //        let mapItem = MKMapItem(placemark: placemark)
-//        mapItem.name = collectionOfLocations
+////        mapItem.name = collectionOfLocations
 //        let launchOptions = [MKLaunchOptionsDirectionsModeKey:MKLaunchOptionsDirectionsModeWalking]
 //        mapItem.openInMapsWithLaunchOptions(launchOptions)
 //    }
@@ -70,14 +73,14 @@ class EventLocationViewController: UIViewController, CLLocationManagerDelegate, 
 //    // pull parking location and load with options in native maps
 //    @IBAction func openAppleMaps(sender: AnyObject) {
 //        
-//        if let loadedParkingSpot = defaults.dataForKey("parkingSpot") {
-//            if let loadedParkingSpot = NSKeyedUnarchiver.unarchiveObjectWithData(loadedParkingSpot) as? CLLocation {
-//                let savedParkingSpot = CLLocationCoordinate2DMake(loadedParkingSpot.coordinate.latitude, loadedParkingSpot.coordinate.longitude)
-//                openInMapsTransit(savedParkingSpot)
+////        if let loadedParkingSpot = defaults.dataForKey("parkingSpot") {
+////            broadcastEventLocation = NSKeyedUnarchiver.unarchiveObjectWithData(loadedParkingSpot) as? CLLocation {
+//                let broadcastEventLocation = CLLocationCoordinate2DMake(broadcastEventLocations.coordinate.latitude, broadcastEventLocations.coordinate.longitude)
+//                openInMapsTransit(broadcastEventLocation)
 //            }
 //        }
 //    }
-//    
+//
 //    //map style choices and function to choose them
 //    enum MapType: Int {
 //        case Standard = 0
