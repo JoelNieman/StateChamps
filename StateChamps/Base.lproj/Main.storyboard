@@ -27,12 +27,6 @@
                                     <constraint firstAttribute="width" constant="250" id="S0z-IL-4x3"/>
                                 </constraints>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Welcome to the State Champs! iOS App! " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yDh-5z-URH">
-                                <rect key="frame" x="108" y="427" width="384" height="24"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                                <color key="textColor" red="0.89411764705882357" green="0.10588235294117647" blue="0.15294117647058825" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <textView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" misplaced="YES" editable="NO" usesAttributedText="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OAk-ga-Dms">
                                 <rect key="frame" x="20" y="456" width="560" height="87"/>
                                 <color key="backgroundColor" red="0.70196080207824707" green="0.70196080207824707" blue="0.70196080207824707" alpha="1" colorSpace="calibratedRGB"/>
@@ -54,38 +48,41 @@
                                 <rect key="frame" x="113" y="205" width="375" height="189"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="147" id="B3V-uT-sxf"/>
+                                    <constraint firstAttribute="width" secondItem="UOM-ng-XHg" secondAttribute="height" multiplier="125:63" id="Bqs-EQ-E9p"/>
                                     <constraint firstAttribute="height" constant="73" id="E0Q-gm-hpt"/>
+                                    <constraint firstAttribute="width" secondItem="UOM-ng-XHg" secondAttribute="height" multiplier="147:73" id="Npr-gc-vT2"/>
                                 </constraints>
                                 <variation key="default">
                                     <mask key="constraints">
                                         <exclude reference="B3V-uT-sxf"/>
+                                        <exclude reference="Bqs-EQ-E9p"/>
                                         <exclude reference="E0Q-gm-hpt"/>
                                     </mask>
                                 </variation>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Welcome to the State Champs! iOS App! " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="13" translatesAutoresizingMaskIntoConstraints="NO" id="yDh-5z-URH">
+                                <rect key="frame" x="20" y="28" width="560" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.050980392156862744" green="0.27843137254901962" blue="0.60784313725490191" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.70196080207824707" green="0.70196080207824707" blue="0.70196080207824707" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="UOM-ng-XHg" firstAttribute="top" secondItem="5TV-he-aeD" secondAttribute="bottom" constant="5" id="3Td-UM-meW"/>
                             <constraint firstAttribute="trailingMargin" secondItem="5TV-he-aeD" secondAttribute="trailing" id="4CD-tn-XpB"/>
-                            <constraint firstItem="UOM-ng-XHg" firstAttribute="top" secondItem="5TV-he-aeD" secondAttribute="bottom" id="4zw-Ud-5nR"/>
-                            <constraint firstItem="EO0-Wh-H4W" firstAttribute="top" secondItem="OAk-ga-Dms" secondAttribute="bottom" constant="40" id="61B-9N-SdS"/>
-                            <constraint firstItem="OAk-ga-Dms" firstAttribute="top" secondItem="UOM-ng-XHg" secondAttribute="bottom" constant="23" id="9TT-d7-bde"/>
-                            <constraint firstItem="UOM-ng-XHg" firstAttribute="centerY" secondItem="eTs-pF-rbh" secondAttribute="centerY" id="B3c-VM-Hm2"/>
+                            <constraint firstItem="EO0-Wh-H4W" firstAttribute="top" secondItem="OAk-ga-Dms" secondAttribute="bottom" constant="10" id="61B-9N-SdS"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="yDh-5z-URH" secondAttribute="leading" id="6S6-O0-2Sc"/>
                             <constraint firstAttribute="leadingMargin" secondItem="5TV-he-aeD" secondAttribute="leading" id="Jk6-Sj-vBe"/>
                             <constraint firstItem="UOM-ng-XHg" firstAttribute="centerX" secondItem="eTs-pF-rbh" secondAttribute="centerX" id="K3b-nx-uMH"/>
-                            <constraint firstItem="OAk-ga-Dms" firstAttribute="top" secondItem="yDh-5z-URH" secondAttribute="bottom" constant="5" id="Lpd-pX-Xxh"/>
                             <constraint firstItem="5TV-he-aeD" firstAttribute="top" secondItem="0vg-hJ-Nih" secondAttribute="bottom" constant="40" id="MKM-SI-Keq"/>
+                            <constraint firstItem="UOM-ng-XHg" firstAttribute="leading" secondItem="eTs-pF-rbh" secondAttribute="leadingMargin" id="QKz-sS-xv1"/>
                             <constraint firstAttribute="trailingMargin" secondItem="OAk-ga-Dms" secondAttribute="trailing" id="Qhx-yE-xAA"/>
-                            <constraint firstItem="UOM-ng-XHg" firstAttribute="width" secondItem="5TV-he-aeD" secondAttribute="height" multiplier="25:21" id="Rg3-qB-Qmj"/>
                             <constraint firstAttribute="leadingMargin" secondItem="OAk-ga-Dms" secondAttribute="leading" id="Vbb-MB-i4F"/>
-                            <constraint firstItem="yDh-5z-URH" firstAttribute="centerX" secondItem="eTs-pF-rbh" secondAttribute="centerX" id="cJQ-wz-Ayu"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="UOM-ng-XHg" secondAttribute="trailing" id="fJm-AK-z0X"/>
+                            <constraint firstItem="5TV-he-aeD" firstAttribute="top" secondItem="yDh-5z-URH" secondAttribute="bottom" constant="8" id="y3L-HJ-dL2"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="yDh-5z-URH" secondAttribute="trailing" id="zxq-rX-vYu"/>
                         </constraints>
-                        <variation key="default">
-                            <mask key="constraints">
-                                <exclude reference="B3c-VM-Hm2"/>
-                                <exclude reference="9TT-d7-bde"/>
-                            </mask>
-                        </variation>
                     </view>
                     <tabBarItem key="tabBarItem" title="Home" image="sample-504-doghouse" id="zTU-k9-K0y"/>
                     <connections>
@@ -228,8 +225,16 @@
                                     <constraint firstAttribute="width" secondItem="rE3-pc-RbA" secondAttribute="height" multiplier="35:8" id="Glh-6D-wfL"/>
                                 </constraints>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0e4-1Y-l5H">
+                                <rect key="frame" x="20" y="198" width="560" height="30"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Tweet!"/>
+                                <connections>
+                                    <action selector="submitTweetButton:" destination="cXa-QH-wmK" eventType="touchUpInside" id="O8N-eP-Pc3"/>
+                                </connections>
+                            </button>
                             <textView clipsSubviews="YES" contentMode="scaleToFill" text="@statechampsnet " textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="mdH-zq-4Hd">
-                                <rect key="frame" x="20" y="70" width="560" height="128"/>
+                                <rect key="frame" x="20" y="60" width="560" height="128"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <accessibility key="accessibilityConfiguration">
                                     <accessibilityTraits key="traits" keyboardKey="YES"/>
@@ -241,36 +246,8 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <button opaque="NO" contentMode="scaleAspectFit" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mlt-Z8-Rjw">
-                                <rect key="frame" x="227" y="233" width="147" height="73"/>
-                                <color key="backgroundColor" red="0.70196080207824707" green="0.70196080207824707" blue="0.70196080207824707" alpha="1" colorSpace="calibratedRGB"/>
-                                <accessibility key="accessibilityConfiguration">
-                                    <accessibilityTraits key="traits" button="YES" image="YES"/>
-                                </accessibility>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="mlt-Z8-Rjw" secondAttribute="height" multiplier="147:73" id="GOI-Ct-k9w"/>
-                                    <constraint firstAttribute="width" secondItem="mlt-Z8-Rjw" secondAttribute="height" multiplier="147:73" id="gON-5D-ChI"/>
-                                </constraints>
-                                <state key="normal" image="SC Logo 375pxl"/>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="gON-5D-ChI"/>
-                                    </mask>
-                                </variation>
-                                <connections>
-                                    <action selector="stateChampsButton:" destination="cXa-QH-wmK" eventType="touchUpInside" id="CwD-nr-yxL"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0e4-1Y-l5H">
-                                <rect key="frame" x="20" y="243" width="560" height="0.0"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="Tweet!"/>
-                                <connections>
-                                    <action selector="submitTweetButton:" destination="cXa-QH-wmK" eventType="touchUpInside" id="O8N-eP-Pc3"/>
-                                </connections>
-                            </button>
                             <textField hidden="YES" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="124" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xX0-Em-4qU">
-                                <rect key="frame" x="545.5" y="200" width="24.5" height="15"/>
+                                <rect key="frame" x="545.5" y="190" width="24.5" height="15"/>
                                 <color key="backgroundColor" red="0.80000001192092896" green="0.80000001192092896" blue="0.80000001192092896" alpha="1" colorSpace="calibratedRGB"/>
                                 <accessibility key="accessibilityConfiguration">
                                     <accessibilityTraits key="traits" notEnabled="YES"/>
@@ -291,6 +268,26 @@
                                     <action selector="tweet2ButtonPressed:" destination="cXa-QH-wmK" eventType="touchUpInside" id="PsR-FC-gF2"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleAspectFit" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mlt-Z8-Rjw">
+                                <rect key="frame" x="227" y="278" width="147" height="73"/>
+                                <color key="backgroundColor" red="0.70196080207824707" green="0.70196080207824707" blue="0.70196080207824707" alpha="1" colorSpace="calibratedRGB"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" button="YES" image="YES"/>
+                                </accessibility>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="mlt-Z8-Rjw" secondAttribute="height" multiplier="147:73" id="GOI-Ct-k9w"/>
+                                    <constraint firstAttribute="width" secondItem="mlt-Z8-Rjw" secondAttribute="height" multiplier="147:73" id="gON-5D-ChI"/>
+                                </constraints>
+                                <state key="normal" image="SC Logo 375pxl"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="gON-5D-ChI"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="stateChampsButton:" destination="cXa-QH-wmK" eventType="touchUpInside" id="CwD-nr-yxL"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.70196080207824707" green="0.70196080207824707" blue="0.70196080207824707" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -303,23 +300,31 @@
                             <constraint firstAttribute="trailingMargin" secondItem="0e4-1Y-l5H" secondAttribute="trailing" id="HGK-E9-0N1"/>
                             <constraint firstAttribute="leadingMargin" secondItem="oof-NO-ACM" secondAttribute="leading" id="K71-sb-NRx"/>
                             <constraint firstAttribute="trailingMargin" secondItem="mdH-zq-4Hd" secondAttribute="trailing" id="LgE-7q-Irp"/>
-                            <constraint firstItem="mdH-zq-4Hd" firstAttribute="top" secondItem="elr-jh-BKY" secondAttribute="bottom" constant="50" id="MKu-R6-8xf"/>
+                            <constraint firstItem="mdH-zq-4Hd" firstAttribute="top" secondItem="elr-jh-BKY" secondAttribute="bottom" constant="40" id="MKu-R6-8xf"/>
                             <constraint firstAttribute="leadingMargin" secondItem="0e4-1Y-l5H" secondAttribute="leading" id="Nnq-TH-o6k"/>
-                            <constraint firstItem="oof-NO-ACM" firstAttribute="top" secondItem="rE3-pc-RbA" secondAttribute="bottom" constant="16" id="Nvk-dl-y3K"/>
-                            <constraint firstItem="0e4-1Y-l5H" firstAttribute="top" secondItem="mdH-zq-4Hd" secondAttribute="bottom" constant="25" id="P9I-a5-aZF"/>
+                            <constraint firstItem="oof-NO-ACM" firstAttribute="top" secondItem="rE3-pc-RbA" secondAttribute="bottom" constant="10" id="Nvk-dl-y3K"/>
+                            <constraint firstItem="0e4-1Y-l5H" firstAttribute="top" secondItem="mdH-zq-4Hd" secondAttribute="bottom" constant="10" id="P9I-a5-aZF"/>
                             <constraint firstItem="mlt-Z8-Rjw" firstAttribute="top" secondItem="0e4-1Y-l5H" secondAttribute="bottom" id="S9V-nZ-F3o"/>
-                            <constraint firstItem="mlt-Z8-Rjw" firstAttribute="leading" secondItem="CJx-13-Dtf" secondAttribute="leadingMargin" constant="-20" id="VMW-HG-KN8"/>
+                            <constraint firstItem="0MH-ft-XKG" firstAttribute="top" secondItem="oof-NO-ACM" secondAttribute="bottom" constant="10" id="SID-Vo-E3I"/>
+                            <constraint firstItem="mlt-Z8-Rjw" firstAttribute="leading" secondItem="CJx-13-Dtf" secondAttribute="leadingMargin" id="VMW-HG-KN8"/>
                             <constraint firstItem="xX0-Em-4qU" firstAttribute="top" secondItem="mdH-zq-4Hd" secondAttribute="bottom" constant="2" id="YOQ-yg-Fds"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="mlt-Z8-Rjw" secondAttribute="trailing" constant="-20" id="b1Y-4P-LwC"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="mlt-Z8-Rjw" secondAttribute="trailing" id="b1Y-4P-LwC"/>
+                            <constraint firstItem="mlt-Z8-Rjw" firstAttribute="top" secondItem="mdH-zq-4Hd" secondAttribute="bottom" constant="8" symbolic="YES" id="bGa-ii-uNa"/>
                             <constraint firstAttribute="leadingMargin" secondItem="rE3-pc-RbA" secondAttribute="leading" id="mYZ-1V-zOW"/>
                             <constraint firstAttribute="trailingMargin" secondItem="rE3-pc-RbA" secondAttribute="trailing" id="nph-Tx-1uk"/>
                             <constraint firstItem="0MH-ft-XKG" firstAttribute="top" secondItem="oof-NO-ACM" secondAttribute="bottom" constant="29" id="rps-06-Fb7"/>
                             <constraint firstAttribute="trailingMargin" secondItem="oof-NO-ACM" secondAttribute="trailing" id="uD7-ai-IFD"/>
+                            <constraint firstItem="mlt-Z8-Rjw" firstAttribute="top" secondItem="0e4-1Y-l5H" secondAttribute="bottom" constant="-2" id="xpT-Ec-tlt"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
+                                <exclude reference="5Am-uZ-gw4"/>
+                                <exclude reference="B7b-fS-u2a"/>
+                                <exclude reference="6Wx-tz-vmf"/>
                                 <exclude reference="98v-pC-ha3"/>
                                 <exclude reference="S9V-nZ-F3o"/>
+                                <exclude reference="bGa-ii-uNa"/>
+                                <exclude reference="rps-06-Fb7"/>
                             </mask>
                         </variation>
                     </view>
