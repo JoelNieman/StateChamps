@@ -3,6 +3,7 @@ Mobile Application for the State Champs! television show.
 
 1) Current working condition and functionality.
 2) Installation requirements
+3) API Keys
 
 --------------------------------------------------------------
 
@@ -19,3 +20,7 @@ Mobile Application for the State Champs! television show.
 
 
 2.1 - The State Champs! app uses the YouTubePlayer CocoaPod. After cloning/downloading the project, navigate into the project directory and run "pod install." Use the XCWorkspace file after doing so.
+
+
+
+3.1 - API keys are not being uploaded to GitHub for the State Champs! app. If you would like to add YouTube/Twitter/FB API calls, you will need to create a plist file called ApiKeys and add your keys to this dictionary. 
