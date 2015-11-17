@@ -19,6 +19,8 @@ DerivedData
 **/.DS_Store
 *.DS_Store
 *DS_Store
+ApiKeys.plist
+*ApiKeys.plist
 
 # CocoaPods
 #
