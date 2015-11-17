@@ -2,12 +2,15 @@
 Mobile Application for the State Champs! television show.
 
 1) Current working condition and functionality.
+
 2) Installation requirements
+
 3) API Keys
 
 --------------------------------------------------------------
 
 1.1 - The State Champs! app is being developed initially for the iPhone 6 Plus screen size. Constraints and views will subsequently be updated to make the app ideal for all relevant iPhone screen sizes as well as iPads.
+(currently works decent on all iPhones from 5 - 6s Plus)
 
 1.2 - Design has been left fairly basic as I will be working with the State Champs! staff designer to improve the UI in the coming weeks.
 
