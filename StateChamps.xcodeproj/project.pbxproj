@@ -20,6 +20,8 @@
 		5DC384AD1BE9852D0052E4B8 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DC384AC1BE9852D0052E4B8 /* HomeViewController.swift */; };
 		5DC3852C1BEBA4970052E4B8 /* YouTubeVideos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DC3852B1BEBA4970052E4B8 /* YouTubeVideos.swift */; };
 		5DC385341BED4A630052E4B8 /* VideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DC385331BED4A630052E4B8 /* VideoViewController.swift */; };
+		5DEE48101BFAE0B900DF86F0 /* ApiKeys.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5DEE480F1BFAE0B900DF86F0 /* ApiKeys.plist */; };
+		5DEE48121BFAE1E100DF86F0 /* ApiKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DEE48111BFAE1E100DF86F0 /* ApiKeys.swift */; };
 		5DFEE7C91BF407A8001E468D /* TwitterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DFEE7C81BF407A8001E468D /* TwitterViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -61,6 +63,8 @@
 		5DC384AC1BE9852D0052E4B8 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		5DC3852B1BEBA4970052E4B8 /* YouTubeVideos.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YouTubeVideos.swift; sourceTree = "<group>"; };
 		5DC385331BED4A630052E4B8 /* VideoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoViewController.swift; sourceTree = "<group>"; };
+		5DEE480F1BFAE0B900DF86F0 /* ApiKeys.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ApiKeys.plist; sourceTree = "<group>"; };
+		5DEE48111BFAE1E100DF86F0 /* ApiKeys.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiKeys.swift; sourceTree = "<group>"; };
 		5DFEE7C81BF407A8001E468D /* TwitterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwitterViewController.swift; sourceTree = "<group>"; };
 		A5EC636D377A2B883CEBFA74 /* Pods-StateChamps.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StateChamps.release.xcconfig"; path = "Pods/Target Support Files/Pods-StateChamps/Pods-StateChamps.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -123,6 +127,7 @@
 				5DBCF9C61BE7FD30001C45B4 /* LaunchScreen.storyboard */,
 				5DBCF9C91BE7FD30001C45B4 /* Info.plist */,
 				5DB3CAAB1BF140BE00D76817 /* Assets.xcassets */,
+				5DEE480F1BFAE0B900DF86F0 /* ApiKeys.plist */,
 			);
 			path = StateChamps;
 			sourceTree = "<group>";
@@ -162,6 +167,7 @@
 			children = (
 				5DC3852B1BEBA4970052E4B8 /* YouTubeVideos.swift */,
 				5DB3CAB01BF28D4B00D76817 /* EventLocations.swift */,
+				5DEE48111BFAE1E100DF86F0 /* ApiKeys.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -291,6 +297,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5DBCF9C81BE7FD30001C45B4 /* LaunchScreen.storyboard in Resources */,
+				5DEE48101BFAE0B900DF86F0 /* ApiKeys.plist in Resources */,
 				5DB3CAAC1BF140BE00D76817 /* Assets.xcassets in Resources */,
 				5DBCF9C31BE7FD30001C45B4 /* Main.storyboard in Resources */,
 			);
@@ -367,6 +374,7 @@
 			files = (
 				5DFEE7C91BF407A8001E468D /* TwitterViewController.swift in Sources */,
 				5DBCF9BE1BE7FD30001C45B4 /* AppDelegate.swift in Sources */,
+				5DEE48121BFAE1E100DF86F0 /* ApiKeys.swift in Sources */,
 				5DB3CAB11BF28D4B00D76817 /* EventLocations.swift in Sources */,
 				5DC3852C1BEBA4970052E4B8 /* YouTubeVideos.swift in Sources */,
 				5DB3CAB31BF2995C00D76817 /* EventLocationViewController.swift in Sources */,
