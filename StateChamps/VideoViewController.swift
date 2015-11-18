@@ -21,42 +21,25 @@ class VideoViewController: UIViewController, UITableViewDataSource, UITableViewD
     let maxResults = 15
     var youTubeVideoSelected = ""
     
-//    var videoDetails:String = ""
-    
-    //  This next bloc was used to hardcode in the videos.
-    //  This initializes my video collection from the "YouTubeVideos.swift" file in the model folder.
-//    let youTubeVideos = (youTubeVideoCollection)
-    
-    //  I'm initializing the first video in the player as video1
-//    var youTubeVideoSelected = video1
-    
 
     override func viewDidLoad() {
         super.viewDidLoad()
         getVideosForStateChamps()
-        loadVideo("")
+        loadVideo()
 
-//        videoSelectionLabel.text! = String(video1.title!)
+        //  videoSelectionLabel.text! = String(video1.title!)
     }
     
-    func loadVideo(videoToLoad: String) {
-        let selectedVideoID = ""
-        
-//        let youTubeVideoSelectedString = String(youTubeVideoSelected)
-//        let selectedVideoURL = NSURL(string: youTubeVideoSelected.videoURL!)!
-
+    func loadVideo() {
         videoPlayer.playerVars = [
             "playsinline": "1",
             "controls": "1",
             "showinfo": "0"
         ]
             videoPlayer.loadVideoID(youTubeVideoSelected)
-        
-//        videoPlayer.loadVideoURL(selectedVideoURL)
-
     }
     
-    //  TableView set-up section
+    //  TableView set-up section--------------------------------------------------
 
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1
@@ -71,8 +54,7 @@ class VideoViewController: UIViewController, UITableViewDataSource, UITableViewD
         var cell = tableView.dequeueReusableCellWithIdentifier("tableCell") as UITableViewCell!
         
         if (cell == nil) {
-            cell = UITableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: "tableCell")
-        }
+            cell = UITableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: "tableCell") }
         
         let videoDetails = videosArray[indexPath.row]
         cell.textLabel?.text = videoDetails["title"] as? String
@@ -80,42 +62,41 @@ class VideoViewController: UIViewController, UITableViewDataSource, UITableViewD
     }
     
     //  LoadVideo() in didSelectRowAtIndexPath updates the video player with the selected video URL.
-    
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         let videoDetails = videosArray[indexPath.row]
         youTubeVideoSelected = videoDetails["videoID"] as! String
-        loadVideo(youTubeVideoSelected)
         videoSelectionLabel.text! = String(videoDetails["title"]!)
         print(youTubeVideoSelected)
+        loadVideo()
     }
     
-    func performGetRequest(targetURL: NSURL!, maxResults: Int, completion: (data: NSData?, HTTPStatusCode: Int, error: NSError?) -> Void) {
+    //  YouTube API set-up section-----------------------------------------------
+    
+    func performGetRequest(targetURL: NSURL!, completion: (data: NSData?, HTTPStatusCode: Int, error: NSError?) -> Void) {
         let request = NSMutableURLRequest(URL: targetURL)
         request.HTTPMethod = "GET"
         
         let sessionConfiguration = NSURLSessionConfiguration.defaultSessionConfiguration()
-        
         let session = NSURLSession(configuration: sessionConfiguration)
-        
         let task = session.dataTaskWithRequest(request, completionHandler: { (data: NSData?, response: NSURLResponse?, error: NSError?) -> Void in
             dispatch_async(dispatch_get_main_queue(), { () -> Void in
                 completion(data: data, HTTPStatusCode: (response as! NSHTTPURLResponse).statusCode, error: error)
             })
         })
-        
         task.resume()
     }
     
     func getVideosForStateChamps() {
         
-        // Form the request URL string.
+        //  Form the request URL string.
+        //  This is where I define the parameters of the search (i.e., PlaylistID, MaxResults, & APIKey)
         let urlString = "https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&playlistId=\(playlistID)&maxResults=\(maxResults)&key=\(apiKey)"
         
         // Create a NSURL object based on the above string.
         let targetURL = NSURL(string: urlString)!
         
         // Fetch the playlist from Google.
-        performGetRequest(targetURL, maxResults: 10, completion: { (data, HTTPStatusCode, error) -> Void in
+        performGetRequest(targetURL, completion: { (data, HTTPStatusCode, error) -> Void in
             if HTTPStatusCode == 200 && error == nil {
                 do {
                     // Convert the JSON data into a dictionary.
@@ -153,5 +134,3 @@ class VideoViewController: UIViewController, UITableViewDataSource, UITableViewD
         })
     }
 }
-
-
