@@ -14,7 +14,7 @@ Mobile Application for the State Champs! television show.
 
 1.2 - Design has been left fairly basic as I will be working with the State Champs! staff designer to improve the UI in the coming weeks.
 
-1.3 - Twitter API is not currently active. YouTube is set-up, however, the long-term position is to create an API for the State Champs! owned servers and move away from YouTube.
+1.3 - Twitter API is currently not active. YouTube is set-up, however, the long-term position is to create an API for the State Champs! owned servers and move away from YouTube.
 
 1.4 - Map is not yet fully integrated with the native maps app for directions.
 
