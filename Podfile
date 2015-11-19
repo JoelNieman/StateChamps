@@ -4,6 +4,7 @@ use_frameworks!
 target 'StateChamps' do
 
 pod 'YouTubePlayer'
+pod 'Parse'
 
 end
 

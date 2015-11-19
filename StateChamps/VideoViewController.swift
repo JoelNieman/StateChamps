@@ -92,7 +92,7 @@ class VideoViewController: UIViewController, UITableViewDataSource, UITableViewD
             loadVideo()
         }
     }
-    
+
     
     
     
@@ -207,10 +207,6 @@ class VideoViewController: UIViewController, UITableViewDataSource, UITableViewD
             })
         }
     }
-//    @IBAction func updateVideosButtonPressed(sender: AnyObject) {
-//        getVideosForStateChamps()
-//        
-//    }
     
     @IBAction func segmentedControlPressed(sender: AnyObject) {
         getVideosForStateChamps()
