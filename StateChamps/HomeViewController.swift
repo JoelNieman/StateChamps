@@ -8,6 +8,7 @@
 
 import UIKit
 import YouTubePlayer
+import Parse
 
 class HomeViewController: UIViewController {
     
@@ -18,6 +19,11 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         loadVideo()
+        let testObject = PFObject(className: "TestObject")
+        testObject["foo"] = "bar"
+        testObject.saveInBackgroundWithBlock { (success: Bool, error: NSError?) -> Void in
+            print("Object has been saved.")
+        }
     }
     
     //  This sets up the video. The values (0 or 1) change the properties of the video player

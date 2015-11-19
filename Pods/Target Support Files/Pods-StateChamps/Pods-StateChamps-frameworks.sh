@@ -84,8 +84,12 @@ strip_invalid_archs() {
 
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
+  install_framework "Pods-StateChamps/Bolts.framework"
+  install_framework "Pods-StateChamps/Parse.framework"
   install_framework "Pods-StateChamps/YouTubePlayer.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
+  install_framework "Pods-StateChamps/Bolts.framework"
+  install_framework "Pods-StateChamps/Parse.framework"
   install_framework "Pods-StateChamps/YouTubePlayer.framework"
 fi
