@@ -93,7 +93,7 @@ class VideoViewController: UIViewController, UITableViewDataSource, UITableViewD
         }
     }
 
-    
+    //  End TableView set-up section---------------------------------------------
     
     
     //  YouTube API set-up section-----------------------------------------------
@@ -211,5 +211,7 @@ class VideoViewController: UIViewController, UITableViewDataSource, UITableViewD
     @IBAction func segmentedControlPressed(sender: AnyObject) {
         getVideosForStateChamps()
     }
+    
+    //  End YouTube API set-up section-------------------------------------------
     
 }

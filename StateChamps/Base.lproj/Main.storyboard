@@ -34,8 +34,7 @@
                                     <constraint firstAttribute="height" constant="107" id="sjI-pZ-KB0"/>
                                 </constraints>
                                 <attributedString key="attributedText">
-                                    <fragment>
-                                        <string key="content">Here you will find all the news and media you've grown to love to keep you informed about Michigan HS Athletics. We'll update the app content as frequently as possible, but don't wait for us, upload your own videos and share with the community!</string>
+                                    <fragment content="Parse populated promotional text goes here.">
                                         <attributes>
                                             <font key="NSFont" size="14" name="HelveticaNeue"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
@@ -87,6 +86,7 @@
                     <tabBarItem key="tabBarItem" title="Home" image="sample-504-doghouse" id="zTU-k9-K0y"/>
                     <connections>
                         <outlet property="playerView" destination="5TV-he-aeD" id="HEI-zZ-anQ"/>
+                        <outlet property="promotionalText" destination="OAk-ga-Dms" id="QfJ-SX-eUr"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YmL-N5-C7f" userLabel="First Responder" sceneMemberID="firstResponder"/>
