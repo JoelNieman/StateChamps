@@ -198,7 +198,7 @@ class VideoViewController: UIViewController, UITableViewDataSource, UITableViewD
                     } catch {
                         print(error)
                     }
-                    print(self.showVideosArray)
+                    print(self.highlightVideosArray)
                 }
                 else {
                     print("HTTP Status Code = \(HTTPStatusCode)")
