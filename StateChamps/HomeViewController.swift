@@ -13,35 +13,36 @@ import Parse
 class HomeViewController: UIViewController {
     
     @IBOutlet weak var playerView: YouTubePlayerView!
-
     @IBOutlet weak var promotionalText: UITextView!
+    @IBOutlet weak var headerText: UILabel!
     
-    let myVideoURL = NSURL(string: "https://youtu.be/6dgBIZc4C70")
+    
+    var myVideoURL = NSURL(string: "")
 
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        loadVideo()
+        
 
         var query = PFQuery(className: "Promotion")
         query.getObjectInBackgroundWithId("u3xkpfBLAe") {
             (object:PFObject?, error:NSError?) -> Void in
             
             let promotion = object!["text"] as! String
-            
-            print(promotion)
             self.promotionalText.text = promotion
 //            self.promotionalText.textAlignment =
 //            self.promotionalText.font = 
+            
+            let headerText = object!["headerText"] as! String
+            self.headerText.text = headerText
+            
+            let homeVideoURL = object!["homeVideoURL"] as! String
+            self.myVideoURL = NSURL(string: homeVideoURL)
+        
+            self.loadVideo()
         }
+        
     }
-
-        
-        
-        
-        
-//        let promotionalTextString = PFObject(className: "Promotion")
-//        promotionalText.text = String(promotionalTextString)
         
 //        let testObject = PFObject(className: "TestObject")
 //        testObject["foo"] = "bar"
