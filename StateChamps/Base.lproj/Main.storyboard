@@ -34,8 +34,7 @@
                                     <constraint firstAttribute="height" constant="107" id="sjI-pZ-KB0"/>
                                 </constraints>
                                 <attributedString key="attributedText">
-                                    <fragment>
-                                        <string key="content">Here you will find all the news and media you've grown to love to keep you informed about Michigan HS Athletics. We'll update the app content as frequently as possible, but don't wait for us, upload your own videos and share with the community!</string>
+                                    <fragment content="Parse populated promotional text goes here.">
                                         <attributes>
                                             <font key="NSFont" size="14" name="HelveticaNeue"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
@@ -60,7 +59,7 @@
                                     </mask>
                                 </variation>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Welcome to the State Champs! iOS App! " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="13" translatesAutoresizingMaskIntoConstraints="NO" id="yDh-5z-URH">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Joel is cool" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="13" translatesAutoresizingMaskIntoConstraints="NO" id="yDh-5z-URH">
                                 <rect key="frame" x="20" y="28" width="560" height="24"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.050980392156862744" green="0.27843137254901962" blue="0.60784313725490191" alpha="1" colorSpace="calibratedRGB"/>
@@ -86,7 +85,9 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Home" image="sample-504-doghouse" id="zTU-k9-K0y"/>
                     <connections>
+                        <outlet property="headerText" destination="yDh-5z-URH" id="sjP-Ve-Ic5"/>
                         <outlet property="playerView" destination="5TV-he-aeD" id="HEI-zZ-anQ"/>
+                        <outlet property="promotionalText" destination="OAk-ga-Dms" id="QfJ-SX-eUr"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YmL-N5-C7f" userLabel="First Responder" sceneMemberID="firstResponder"/>

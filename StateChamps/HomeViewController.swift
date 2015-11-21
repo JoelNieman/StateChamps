@@ -13,18 +13,43 @@ import Parse
 class HomeViewController: UIViewController {
     
     @IBOutlet weak var playerView: YouTubePlayerView!
+    @IBOutlet weak var promotionalText: UITextView!
+    @IBOutlet weak var headerText: UILabel!
+    
+    
+    var myVideoURL = NSURL(string: "")
 
-    let myVideoURL = NSURL(string: "https://youtu.be/6dgBIZc4C70")
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        loadVideo()
-        let testObject = PFObject(className: "TestObject")
-        testObject["foo"] = "bar"
-        testObject.saveInBackgroundWithBlock { (success: Bool, error: NSError?) -> Void in
-            print("Object has been saved.")
+        
+
+        var query = PFQuery(className: "Promotion")
+        query.getObjectInBackgroundWithId("u3xkpfBLAe") {
+            (object:PFObject?, error:NSError?) -> Void in
+            
+            let promotion = object!["text"] as! String
+            self.promotionalText.text = promotion
+//            self.promotionalText.textAlignment =
+//            self.promotionalText.font = 
+            
+            let headerText = object!["headerText"] as! String
+            self.headerText.text = headerText
+            
+            let homeVideoURL = object!["homeVideoURL"] as! String
+            self.myVideoURL = NSURL(string: homeVideoURL)
+        
+            self.loadVideo()
         }
+        
     }
+        
+//        let testObject = PFObject(className: "TestObject")
+//        testObject["foo"] = "bar"
+//        testObject.saveInBackgroundWithBlock { (success: Bool, error: NSError?) -> Void in
+//            print("Object has been saved.")
+//        }
+//    }
     
     //  This sets up the video. The values (0 or 1) change the properties of the video player
     
