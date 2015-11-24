@@ -15,16 +15,18 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var playerView: YouTubePlayerView!
     @IBOutlet weak var promotionalText: UITextView!
     @IBOutlet weak var headerText: UILabel!
-    
+    @IBOutlet weak var promotionLabel: UIButton!
     
     var myVideoURL = NSURL(string: "")
-
+    var promotionURL = NSURL(string: "")
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        queryParseAndLoadVideo()
+    }
         
-
-        var query = PFQuery(className: "Promotion")
+    func queryParseAndLoadVideo() {
+        let query = PFQuery(className: "Promotion")
         query.getObjectInBackgroundWithId("u3xkpfBLAe") {
             (object:PFObject?, error:NSError?) -> Void in
             
@@ -38,18 +40,14 @@ class HomeViewController: UIViewController {
             
             let homeVideoURL = object!["homeVideoURL"] as! String
             self.myVideoURL = NSURL(string: homeVideoURL)
-        
+            
+            let promotionLinkURL = object!["promotionURL"] as! String
+            self.promotionURL = NSURL(string: promotionLinkURL)
+//            self.promotionLabel.text = "Latest promotion goes here"
+
             self.loadVideo()
         }
-        
     }
-        
-//        let testObject = PFObject(className: "TestObject")
-//        testObject["foo"] = "bar"
-//        testObject.saveInBackgroundWithBlock { (success: Bool, error: NSError?) -> Void in
-//            print("Object has been saved.")
-//        }
-//    }
     
     //  This sets up the video. The values (0 or 1) change the properties of the video player
     
@@ -61,4 +59,11 @@ class HomeViewController: UIViewController {
         ]
         playerView.loadVideoURL(myVideoURL!)
     }
+    
+    //        let testObject = PFObject(className: "TestObject")
+    //        testObject["foo"] = "bar"
+    //        testObject.saveInBackgroundWithBlock { (success: Bool, error: NSError?) -> Void in
+    //            print("Object has been saved.")
+    //        }
+    //    }
 }

@@ -65,6 +65,10 @@
                                 <color key="textColor" red="0.050980392156862744" green="0.27843137254901962" blue="0.60784313725490191" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O76-uL-UfU">
+                                <rect key="frame" x="20" y="513" width="560" height="30"/>
+                                <state key="normal" title="Button"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.70196080207824707" green="0.70196080207824707" blue="0.70196080207824707" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -72,13 +76,16 @@
                             <constraint firstAttribute="trailingMargin" secondItem="5TV-he-aeD" secondAttribute="trailing" id="4CD-tn-XpB"/>
                             <constraint firstItem="EO0-Wh-H4W" firstAttribute="top" secondItem="OAk-ga-Dms" secondAttribute="bottom" constant="10" id="61B-9N-SdS"/>
                             <constraint firstAttribute="leadingMargin" secondItem="yDh-5z-URH" secondAttribute="leading" id="6S6-O0-2Sc"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="O76-uL-UfU" secondAttribute="leading" id="Cmb-c7-hAQ"/>
                             <constraint firstAttribute="leadingMargin" secondItem="5TV-he-aeD" secondAttribute="leading" id="Jk6-Sj-vBe"/>
                             <constraint firstItem="UOM-ng-XHg" firstAttribute="centerX" secondItem="eTs-pF-rbh" secondAttribute="centerX" id="K3b-nx-uMH"/>
                             <constraint firstItem="5TV-he-aeD" firstAttribute="top" secondItem="0vg-hJ-Nih" secondAttribute="bottom" constant="40" id="MKM-SI-Keq"/>
                             <constraint firstItem="UOM-ng-XHg" firstAttribute="leading" secondItem="eTs-pF-rbh" secondAttribute="leadingMargin" id="QKz-sS-xv1"/>
                             <constraint firstAttribute="trailingMargin" secondItem="OAk-ga-Dms" secondAttribute="trailing" id="Qhx-yE-xAA"/>
+                            <constraint firstItem="EO0-Wh-H4W" firstAttribute="top" secondItem="O76-uL-UfU" secondAttribute="bottom" constant="8" id="Qtf-Pb-0pr"/>
                             <constraint firstAttribute="leadingMargin" secondItem="OAk-ga-Dms" secondAttribute="leading" id="Vbb-MB-i4F"/>
                             <constraint firstAttribute="trailingMargin" secondItem="UOM-ng-XHg" secondAttribute="trailing" id="fJm-AK-z0X"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="O76-uL-UfU" secondAttribute="trailing" id="x8f-Re-4on"/>
                             <constraint firstItem="5TV-he-aeD" firstAttribute="top" secondItem="yDh-5z-URH" secondAttribute="bottom" constant="8" id="y3L-HJ-dL2"/>
                             <constraint firstAttribute="trailingMargin" secondItem="yDh-5z-URH" secondAttribute="trailing" id="zxq-rX-vYu"/>
                         </constraints>
@@ -87,6 +94,7 @@
                     <connections>
                         <outlet property="headerText" destination="yDh-5z-URH" id="sjP-Ve-Ic5"/>
                         <outlet property="playerView" destination="5TV-he-aeD" id="HEI-zZ-anQ"/>
+                        <outlet property="promotionLabel" destination="O76-uL-UfU" id="DEE-Lb-sCO"/>
                         <outlet property="promotionalText" destination="OAk-ga-Dms" id="QfJ-SX-eUr"/>
                     </connections>
                 </viewController>
