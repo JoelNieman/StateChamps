@@ -9,6 +9,7 @@
 import UIKit
 import CoreLocation
 import MapKit
+import Parse
 
 class EventLocationViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate  {
 
@@ -16,6 +17,20 @@ class EventLocationViewController: UIViewController, CLLocationManagerDelegate, 
     
     let locationManager = CLLocationManager()
     var collectionOfLocations = [MKAnnotation]()
+    
+    var eventLatitude: Double!
+    var eventLongitude: Double!
+    var locationName: String!
+    var dateAndTime: String!
+    var eventDescription: String!
+    
+    var eventLocationCoordinates: CLLocationCoordinate2D  {
+        get {
+            return CLLocationCoordinate2DMake(eventLatitude, eventLongitude)
+            print(eventLocationCoordinates)
+        }
+    }
+    
 //    var broadcastEventLocation = EventLocations.eventLocation
 //    var broadcastEventLocations = [broadcastEventLocation]
     
@@ -30,7 +45,9 @@ class EventLocationViewController: UIViewController, CLLocationManagerDelegate, 
         locationManager.startUpdatingLocation()
         
         setupEventLocationMap()
-        populateCollectionOfLocations()
+//        populateCollectionOfLocations()
+        queryParseForLocations()
+        
     }
 
     //  SetupEventLocationMap sets the default location to Grand Circus for simulation.
@@ -46,18 +63,70 @@ class EventLocationViewController: UIViewController, CLLocationManagerDelegate, 
     //     For-In loop goes through the eventLocations array in the EventLocations.swift file
     //     and appends a pin for each location into the collectionOfLocations
     
-    func populateCollectionOfLocations() {
-        for i in 0..<eventLocations.count {
-            let location = MKPointAnnotation()
-            //            broadcastEventLocation = eventLocations()
-            location.coordinate = eventLocations[i].eventLocationCoordinates
-            location.title = String("\(eventLocations[i].locationName)")
-            //            location.description = String("\(eventLocations[i].eventDescription)")
-            
-            collectionOfLocations.append(location)
+//    func populateCollectionOfLocations() {
+//        for i in 0..<eventLocations.count {
+//            let location = MKPointAnnotation()
+//            //            broadcastEventLocation = eventLocations()
+//            location.coordinate = eventLocations[i].eventLocationCoordinates
+//            location.title = String("\(eventLocations[i].locationName)")
+//            //            location.description = String("\(eventLocations[i].eventDescription)")
+//            
+//            collectionOfLocations.append(location)
+//        }
+//        eventLocationMap.addAnnotations(collectionOfLocations)
+//    }
+    
+//    func queryParseForLocations() {
+//        var query = PFQuery(className: "EventLocation")
+//        query.findObjects()
+//        
+//        let objects = query.findObjects()
+//        
+//        for object in objects {
+//            let eventLatitude = object.valueForKey("Latitude") as! Double
+//            let eventLongitude = object.valueForKey("Longitude") as! Double
+    
+//            let location = MKPointAnnotation()
+//            location.coordinate =
+        
+//    }
+//}
+    func queryParseForLocations() {
+        var query = PFQuery(className:"EventLocation")
+        query.whereKey("eventLatitude", greaterThan: 0)
+        query.findObjectsInBackgroundWithBlock {
+            (objects: [PFObject]?, error: NSError?) -> Void in
+    
+            if error == nil {
+                // The find succeeded.
+                print("Successfully retrieved \(objects!.count) objects.")
+                // Do something with the found objects
+                if let objects = objects {
+                    for object in objects {
+                        self.eventLatitude = object.valueForKey("eventLatitude") as! Double
+                        self.eventLongitude = object.valueForKey("eventLongitude") as! Double
+                        self.locationName = object.valueForKey("locationName") as! String
+                        self.dateAndTime = object.valueForKey("dateAndTime") as! String
+                        self.eventDescription = object.valueForKey("eventDescription") as! String
+
+                        let location = MKPointAnnotation()
+                        location.coordinate = self.eventLocationCoordinates
+                        location.title = self.locationName
+                        location.subtitle = String("\(self.eventDescription): \(self.dateAndTime)")
+                        
+                        
+                        self.collectionOfLocations.append(location)
+                    }
+                    self.eventLocationMap.addAnnotations(self.collectionOfLocations)
+                }
+            } else {
+                // Log details of the failure
+                print("Error: \(error!) \(error!.userInfo)")
+            }
         }
-        eventLocationMap.addAnnotations(collectionOfLocations)
     }
+}
+    
     
     
 
@@ -97,4 +166,3 @@ class EventLocationViewController: UIViewController, CLLocationManagerDelegate, 
 //            mapView.mapType = MKMapType.Satellite
 //        }
 //    }
-}
