@@ -17,3 +17,4 @@ func valueForAPIKey(keyname:String) -> String {
 }
 
 let youTubeClientID = valueForAPIKey("YOUTUBE_API_CLIENT_ID")
+let twitterClientID = valueForAPIKey("TWITTER_CONSUMER_KEY")
