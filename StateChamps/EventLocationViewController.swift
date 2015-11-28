@@ -24,6 +24,12 @@ class EventLocationViewController: UIViewController, CLLocationManagerDelegate, 
     var dateAndTime: String!
     var eventDescription: String!
     
+    var event = 1
+    
+    //  This takes the latitude and longitude values and creates a 2D Coordinate Object.
+    //  There may be a simpler way of doing this.
+    //  www.devfright.com/mkpointannotation-tutorial/
+    
     var eventLocationCoordinates: CLLocationCoordinate2D  {
         get {
             return CLLocationCoordinate2DMake(eventLatitude, eventLongitude)
@@ -55,6 +61,8 @@ class EventLocationViewController: UIViewController, CLLocationManagerDelegate, 
         eventLocationMap.setRegion(region, animated: false)
     }
     
+    //  Query the Parse based class "EventLocation" and retrieve each object.
+    
     func queryParseForLocations() {
         var query = PFQuery(className:"EventLocation")
         query.whereKey("eventLatitude", greaterThan: 0)
@@ -64,6 +72,7 @@ class EventLocationViewController: UIViewController, CLLocationManagerDelegate, 
             if error == nil {
                 // The find succeeded.
                 print("Successfully retrieved \(objects!.count) objects.")
+                
                 // Create a MKPointAnnotation for every EventLocation object, append the collection, and place a pin on the map.
                 if let objects = objects {
                     for object in objects {
@@ -72,7 +81,7 @@ class EventLocationViewController: UIViewController, CLLocationManagerDelegate, 
                         self.locationName = object.valueForKey("locationName") as! String
                         self.dateAndTime = object.valueForKey("dateAndTime") as! String
                         self.eventDescription = object.valueForKey("eventDescription") as! String
-
+                        
                         let location = MKPointAnnotation()
                         location.coordinate = self.eventLocationCoordinates
                         location.title = self.locationName
@@ -80,9 +89,8 @@ class EventLocationViewController: UIViewController, CLLocationManagerDelegate, 
                         
                         self.collectionOfLocations.append(location)
                         
-                        var event = 1
-                        print("\(self.eventLocationCoordinates) are the event coordinates for event \(event)")
-                        event++
+                        print("\(self.eventLocationCoordinates) are the event coordinates for event \(self.event)")
+                        self.event++
                     }
                     self.eventLocationMap.addAnnotations(self.collectionOfLocations)
                 }
@@ -93,8 +101,6 @@ class EventLocationViewController: UIViewController, CLLocationManagerDelegate, 
         }
     }
 }
-    
-    
     
 
 //    // Helper function to load some options in native maps
@@ -116,20 +122,3 @@ class EventLocationViewController: UIViewController, CLLocationManagerDelegate, 
 //                openInMapsTransit(broadcastEventLocation)
 //            }
 //        }
-//    }
-//
-//    //map style choices and function to choose them
-//    enum MapType: Int {
-//        case Standard = 0
-//        case Satellite
-//    }
-//    
-//    @IBAction func updateMapStyle(sender: AnyObject) {
-//        let mapType = MapType(rawValue: mapStyleChoices.selectedSegmentIndex)
-//        switch (mapType!) {
-//        case .Standard:
-//            mapView.mapType = MKMapType.Standard
-//        case .Satellite:
-//            mapView.mapType = MKMapType.Satellite
-//        }
-//    }

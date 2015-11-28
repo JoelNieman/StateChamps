@@ -8,6 +8,7 @@
 
 import UIKit
 import YouTubePlayer
+import Social
 
 class VideoViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
@@ -23,6 +24,8 @@ class VideoViewController: UIViewController, UITableViewDataSource, UITableViewD
     let highlightsPlaylistID = "PL8dd-D6tYC0C5v4Qx8DR9p6l8-v_1LLMt"
     let maxResults = 15
     var youTubeVideoSelected = ""
+    var videoID: String!
+    var youTubeURL = "https://youtu.be/"
     
 
     override func viewDidLoad() {
@@ -92,6 +95,61 @@ class VideoViewController: UIViewController, UITableViewDataSource, UITableViewD
             loadVideo()
         }
     }
+    
+    func tableView(tableView: UITableView, editActionsForRowAtIndexPath indexPath: NSIndexPath) -> [UITableViewRowAction] {
+        
+        let shareAction = UITableViewRowAction(style: UITableViewRowActionStyle.Default, title: "Share", handler: { (action:UITableViewRowAction, indexPath:NSIndexPath) -> Void in
+            
+            let shareMenu = UIAlertController(title: nil, message: "Share using", preferredStyle: .ActionSheet)
+
+            
+            let facebookAction = UIAlertAction(title: "Facebook", style: UIAlertActionStyle.Default, handler: { (action) -> Void in
+                
+                //  Check if Facebook is available, otherwise display an error message
+                guard
+                    SLComposeViewController.isAvailableForServiceType(SLServiceTypeFacebook) else {
+                        let alertMessage = UIAlertController(title: "Facebook Unavailable", message: "You haven't registered your Facebook account. Please go to Settings > Facebook to create one.", preferredStyle: .Alert)
+                        alertMessage.addAction(UIAlertAction(title: "OK", style: .Default, handler: nil))
+                        self.presentViewController(alertMessage, animated: true, completion: nil)
+                        
+                        return
+                }
+                
+                //  Display Facebook Composer
+                let facebookComposer = SLComposeViewController(forServiceType: SLServiceTypeFacebook)
+                
+                if self.segmentedControl.selectedSegmentIndex == 0 {
+                
+                let videoDetails = self.showVideosArray[indexPath.row]
+                self.videoID = (videoDetails["videoID"] as! String)
+                facebookComposer.setInitialText(videoDetails["title"] as! String)
+                facebookComposer.addURL(NSURL(string: "\(self.youTubeURL.self)\(self.videoID)\(self.showsPlaylistID)"))
+                self.presentViewController(facebookComposer, animated: true, completion: nil)
+                
+                } else {
+                
+                let videoDetails = self.highlightVideosArray[indexPath.row]
+                self.videoID = (videoDetails["videoID"] as! String)
+                facebookComposer.setInitialText(videoDetails["title"] as! String)
+                facebookComposer.addURL(NSURL(string: "\(self.youTubeURL.self)\(self.videoID)\(self.highlightsPlaylistID)"))
+                self.presentViewController(facebookComposer, animated: true, completion: nil)
+                
+                }
+            })
+            
+            let cancelAction = UIAlertAction(title: "Cancel", style: UIAlertActionStyle.Cancel, handler: nil)
+            
+            shareMenu.addAction(facebookAction)
+            shareMenu.addAction(cancelAction)
+            
+            self.presentViewController(shareMenu, animated: true, completion: nil)
+            }
+        )
+        
+        return [shareAction]
+    }
+        
+    
 
     //  End TableView set-up section---------------------------------------------
     
@@ -122,7 +180,7 @@ class VideoViewController: UIViewController, UITableViewDataSource, UITableViewD
         // Create a NSURL object based on the above string.
         let targetURL = NSURL(string: urlString)!
         
-        // Fetch the playlist from Google.
+        // Fetch the playlist from YouTube.
         performGetRequest(targetURL, completion: { (data, HTTPStatusCode, error) -> Void in
             if HTTPStatusCode == 200 && error == nil {
                 do {

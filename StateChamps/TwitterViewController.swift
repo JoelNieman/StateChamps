@@ -15,6 +15,9 @@ class TwitterViewController: UIViewController {
     @IBOutlet weak var userInputTweetField: UITextView!
     @IBOutlet weak var tweetCharacterCount: UITextField!
     
+    var twitterApiKey = twitterClientID
+    
+    
     //  These items will be used later to count and limit the number of characters to 140
     //  Need to figure out how to count the characters in a Text View (it's different than a text field)
     

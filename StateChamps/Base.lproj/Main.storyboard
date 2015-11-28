@@ -374,6 +374,9 @@
                                 <state key="normal" title="Get Directions">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="getDirectionsButtonPressed:" destination="zdr-rU-pFk" eventType="touchUpInside" id="rcv-fr-8fe"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.60000002384185791" green="0.60000002384185791" blue="0.60000002384185791" alpha="1" colorSpace="calibratedRGB"/>
