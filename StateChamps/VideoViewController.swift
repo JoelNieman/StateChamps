@@ -103,8 +103,42 @@ class VideoViewController: UIViewController, UITableViewDataSource, UITableViewD
         let shareAction = UITableViewRowAction(style: UITableViewRowActionStyle.Default, title: "Share", handler: { (action:UITableViewRowAction, indexPath:NSIndexPath) -> Void in
             
             let shareMenu = UIAlertController(title: nil, message: "Share using", preferredStyle: .ActionSheet)
-
             
+            let twitterAction = UIAlertAction(title: "Twitter", style: UIAlertActionStyle.Default, handler: { (action) -> Void in
+            
+                //  Check if Twitter is available, otherwise display an error message
+                
+                guard
+                    SLComposeViewController.isAvailableForServiceType(SLServiceTypeTwitter) else {
+                        let alertMessage = UIAlertController(title: "Twitter Unavailable", message: "You haven't registered your Twitter account. Please go to Settings > Twitter to create one.", preferredStyle: .Alert)
+                        alertMessage.addAction(UIAlertAction(title: "OK", style: .Default, handler: nil))
+                        self.presentViewController(alertMessage, animated: true, completion: nil)
+                        
+                        return
+                }
+                
+                // Display Tweet Composer
+                let tweetComposer = SLComposeViewController(forServiceType: SLServiceTypeTwitter)
+                if self.segmentedControl.selectedSegmentIndex == 0 {
+                    
+                    let videoDetails = self.showVideosArray[indexPath.row]
+                    self.videoID = (videoDetails["videoID"] as! String)
+                    tweetComposer.setInitialText(videoDetails["title"] as! String)
+                    tweetComposer.addURL(NSURL(string: "\(self.youTubeURL.self)\(self.videoID)\(self.showsPlaylistID)"))
+                    self.presentViewController(tweetComposer, animated: true, completion: nil)
+                    
+                } else {
+                    
+                    let videoDetails = self.highlightVideosArray[indexPath.row]
+                    self.videoID = (videoDetails["videoID"] as! String)
+                    tweetComposer.setInitialText(videoDetails["title"] as! String)
+                    tweetComposer.addURL(NSURL(string: "\(self.youTubeURL.self)\(self.videoID)\(self.highlightsPlaylistID)"))
+                    self.presentViewController(tweetComposer, animated: true, completion: nil)
+                    
+                }
+            })
+
+                
             let facebookAction = UIAlertAction(title: "Facebook", style: UIAlertActionStyle.Default, handler: { (action) -> Void in
                 
                 //  Check if Facebook is available, otherwise display an error message
@@ -116,6 +150,8 @@ class VideoViewController: UIViewController, UITableViewDataSource, UITableViewD
                         
                         return
                 }
+                
+
                 
                 //  Display Facebook Composer
                 let facebookComposer = SLComposeViewController(forServiceType: SLServiceTypeFacebook)
@@ -142,6 +178,7 @@ class VideoViewController: UIViewController, UITableViewDataSource, UITableViewD
             let cancelAction = UIAlertAction(title: "Cancel", style: UIAlertActionStyle.Cancel, handler: nil)
             
             shareMenu.addAction(facebookAction)
+            shareMenu.addAction(twitterAction)
             shareMenu.addAction(cancelAction)
             
             self.presentViewController(shareMenu, animated: true, completion: nil)
@@ -150,7 +187,6 @@ class VideoViewController: UIViewController, UITableViewDataSource, UITableViewD
         
         return [shareAction]
     }
-        
     
 
     //  End TableView set-up section---------------------------------------------
