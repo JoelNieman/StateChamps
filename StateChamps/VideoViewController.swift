@@ -20,9 +20,9 @@ class VideoViewController: UIViewController, UITableViewDataSource, UITableViewD
     var showVideosArray: Array<Dictionary<NSObject, AnyObject>> = []
     var highlightVideosArray: Array<Dictionary<NSObject, AnyObject>> = []
     var apiKey = youTubeClientID
-    let showsPlaylistID = "PL8dd-D6tYC0Bfo5P_gsClzAKu5fCnQcLs"
-    let highlightsPlaylistID = "PL8dd-D6tYC0C5v4Qx8DR9p6l8-v_1LLMt"
-    let maxResults = 15
+    let showsPlaylistID = "PL8dd-D6tYC0DfIJarU3NrrTHvPmMkCjTd"
+    let highlightsPlaylistID = "PL8dd-D6tYC0BeICQ2C3hym16jEyj0SzSJ"
+    let maxResults = 17
     var youTubeVideoSelected = ""
     var videoID: String!
     var youTubeURL = "https://youtu.be/"
@@ -95,6 +95,8 @@ class VideoViewController: UIViewController, UITableViewDataSource, UITableViewD
             loadVideo()
         }
     }
+    
+        //  Facebook and Twitter Sharing
     
     func tableView(tableView: UITableView, editActionsForRowAtIndexPath indexPath: NSIndexPath) -> [UITableViewRowAction] {
         
