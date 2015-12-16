@@ -5,6 +5,9 @@ target 'StateChamps' do
 
 pod 'YouTubePlayer'
 pod 'Parse'
+pod 'Fabric'
+pod 'TwitterKit'
+pod 'TwitterCore'
 
 end
 

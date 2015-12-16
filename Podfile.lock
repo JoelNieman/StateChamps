@@ -1,16 +1,27 @@
 PODS:
   - Bolts/Tasks (1.5.0)
+  - Fabric (1.6.1)
   - Parse (1.9.1):
     - Bolts/Tasks (>= 1.4.0)
+  - TwitterCore (1.14.6):
+    - Fabric
+  - TwitterKit (1.14.6):
+    - TwitterCore (= 1.14.6)
   - YouTubePlayer (0.3.0)
 
 DEPENDENCIES:
+  - Fabric
   - Parse
+  - TwitterCore
+  - TwitterKit
   - YouTubePlayer
 
 SPEC CHECKSUMS:
   Bolts: 722ab9a4f8b50fc4ed1b9998a5a7a2b3f16d80b4
+  Fabric: bf0ceb04e7c924090efc5f8c55e4fbcca189e0a0
   Parse: 54a965c8c19a6dde90284ab654dbcc77ef8c001b
+  TwitterCore: 5e9b2d066ceeef53fe611c0c4436cb700f1ed620
+  TwitterKit: f67360ee0a5f935f053bf37015652ac157e4eb92
   YouTubePlayer: 88713a96c356f2c88da8925eb61438eda88bcd57
 
 COCOAPODS: 0.39.0
