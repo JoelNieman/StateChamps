@@ -258,6 +258,7 @@
 				5DBCF9B81BE7FD30001C45B4 /* Resources */,
 				488DB2B850DA7563CD4EAB61 /* Embed Pods Frameworks */,
 				3A4883FCF172B1599A6CBF49 /* Copy Pods Resources */,
+				5DA77A751C2106B500CD4C25 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -413,6 +414,19 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-StateChamps/Pods-StateChamps-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
+		};
+		5DA77A751C2106B500CD4C25 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Fabric/run\" da6f61e40fbee3c5cea02568df77a603d438b06f a6011c3750f08daa6680455e3e3be8fa6a7d179a20a95d55877e9cf52c5f9f8b";
 		};
 		9E5E6D8663E6BE4FEE532AFD /* Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
