@@ -32,8 +32,6 @@ class VideoViewController: UIViewController, UITableViewDataSource, UITableViewD
         super.viewDidLoad()
         getVideosForStateChamps()
         loadVideo()
-
-        //  videoSelectionLabel.text! = String(video1.title!)
     }
     
     func loadVideo() {

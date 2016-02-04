@@ -30,7 +30,7 @@ class TwitterViewController: TWTRTimelineViewController {
                 alert.addAction(alertAction)
                 self.presentViewController(alert, animated: true, completion: nil)
             } else {
-                NSLog("Login error: %@", error!.localizedDescription);
+                print("Login error: \(error!.localizedDescription)");
             }
             
         }
