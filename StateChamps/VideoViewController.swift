@@ -94,6 +94,8 @@ class VideoViewController: UIViewController, UITableViewDataSource, UITableViewD
         }
     }
     
+    
+    
         //  Facebook and Twitter Sharing
     
     func tableView(tableView: UITableView, editActionsForRowAtIndexPath indexPath: NSIndexPath) -> [UITableViewRowAction] {
@@ -190,6 +192,8 @@ class VideoViewController: UIViewController, UITableViewDataSource, UITableViewD
     //  End TableView set-up section---------------------------------------------
     
     
+    
+    
     //  YouTube API set-up section-----------------------------------------------
     
     func performGetRequest(targetURL: NSURL!, completion: (data: NSData?, HTTPStatusCode: Int, error: NSError?) -> Void) {
@@ -240,8 +244,10 @@ class VideoViewController: UIViewController, UITableViewDataSource, UITableViewD
                         // Append the desiredPlaylistItemDataDict dictionary to the videos array.
                         self.showVideosArray.append(desiredPlaylistItemDataDict)
                         
-                        // Reload the tableview.
-                        self.videoTableView.reloadData()
+                        // dispatch the task back to the main thread.
+                        dispatch_async(dispatch_get_main_queue()) {
+                            self.videoTableView.reloadData()
+                        }
                     }
                 } catch {
                     print(error)
@@ -262,7 +268,7 @@ class VideoViewController: UIViewController, UITableViewDataSource, UITableViewD
             // Create a NSURL object based on the above string.
             let targetURL = NSURL(string: urlString)!
             
-            // Fetch the playlist from Google.
+            // Fetch the playlist from Youtube.
             performGetRequest(targetURL, completion: { (data, HTTPStatusCode, error) -> Void in
                 if HTTPStatusCode == 200 && error == nil {
                     do {
@@ -286,8 +292,10 @@ class VideoViewController: UIViewController, UITableViewDataSource, UITableViewD
                             // Append the desiredPlaylistItemDataDict dictionary to the videos array.
                             self.highlightVideosArray.append(desiredPlaylistItemDataDict)
                             
-                            // Reload the tableview.
-                            self.videoTableView.reloadData()
+                            // dispatch the task back to the main thread.
+                            dispatch_async(dispatch_get_main_queue()) {
+                                self.videoTableView.reloadData()
+                            }
                         }
                     } catch {
                         print(error)
